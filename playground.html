@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground - Python Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="brand">🐍 Python Quiz Master</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Quizzes</a>
+                <a href="theory.html" class="nav-link">Theory</a>
+                <a href="playground.html" class="nav-link">Playground</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="admin.html" class="nav-link">Create</a>
+                <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="quiz-header">
+            <h1>🐍 Python Playground</h1>
+            <p>Write and run Python code right here in your browser. No installation needed.</p>
+        </div>
+
+        <div class="playground-page">
+            <div class="split-layout">
+                <div class="editor-pane">
+                    <div class="pane-label">Your Code</div>
+                    <textarea id="pythonEditor" spellcheck="false">print("Hello, Python!")</textarea>
+                </div>
+                <div class="output-pane">
+                    <div class="pane-label">Output</div>
+                    <pre id="pythonOutput"></pre>
+                </div>
+            </div>
+            <div class="ide-actions">
+                <button class="btn btn-primary" onclick="runPython()" id="runBtn">▶ Run Code</button>
+                <button class="btn btn-secondary" onclick="clearOutput()">Clear</button>
+                <button class="btn btn-secondary" onclick="loadExample()">Load Example</button>
+                <span id="pyStatus" class="py-status"></span>
+            </div>
+            <p class="playground-hint">
+                Tip: press <strong>Ctrl+Enter</strong> to run. Code runs entirely in your browser via Pyodide.
+            </p>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/highlight.js"></script>
+    <script src="js/playground.js"></script>
+</body>
+</html>

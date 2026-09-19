@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Python Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="katex/katex.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="brand">🐍 Python Quiz Master</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Quizzes</a>
+                <a href="theory.html" class="nav-link">Theory</a>
+                <a href="playground.html" class="nav-link">Playground</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="admin.html" class="nav-link">Create</a>
+                <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="quizArea">
+            <p class="loading">Loading quiz...</p>
+        </div>
+    </main>
+
+    <!-- Resume Banner -->
+    <div id="resumeBanner" class="resume-banner" style="display:none;">
+        <div class="container resume-banner-inner">
+            <span>You have a saved attempt in progress.</span>
+            <div class="resume-actions">
+                <button class="btn btn-sm btn-primary" onclick="resumeAttempt()">Resume</button>
+                <button class="btn btn-sm btn-secondary" onclick="restartAttempt()">Restart fresh</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Navigator Side Panel -->
+    <button id="navToggle" class="nav-fab" onclick="toggleNavigator()" title="Questions">☰</button>
+    <aside id="navigator" class="navigator" aria-label="Question navigator">
+        <div class="navigator-header">
+            <span>Questions</span>
+            <button class="btn-close" onclick="toggleNavigator(false)">×</button>
+        </div>
+        <div class="navigator-progress">Answered <strong id="navAnswered">0</strong> / <strong id="navTotal">0</strong></div>
+        <div id="navGrid" class="nav-grid"></div>
+    </aside>
+    <div id="navOverlay" class="nav-overlay" style="display:none;" onclick="toggleNavigator(false)"></div>
+
+    <!-- Review Warning Modal -->
+    <div id="reviewModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2>You skipped some questions</h2>
+            <p class="review-note">You haven't answered <strong id="skippedCount">0</strong> question(s).</p>
+            <div id="skippedList" class="skipped-list"></div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="jumpToSkipped()">Review skipped</button>
+                <button class="btn btn-success" onclick="forceSubmit()">Submit anyway</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2 id="resultTitle">Your Results</h2>
+            <div class="score-display">
+                <span class="score-big" id="scoreText">0/0</span>
+                <span class="score-percent" id="scorePercent">0%</span>
+                <span class="score-best" id="scoreBest"></span>
+                <span class="score-completed" id="scoreCompleted"></span>
+            </div>
+            <div id="resultDetails"></div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="location.reload()">Retake Quiz</button>
+                <a href="index.html" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pyodide Code Runner Modal -->
+    <div id="ideModal" class="modal" style="display:none;">
+        <div class="modal-content wide">
+            <div class="modal-header">
+                <h2>🐍 Python Playground</h2>
+                <button class="btn-close" onclick="closeIDE()">×</button>
+            </div>
+            <div class="split-layout">
+                <div class="editor-pane">
+                    <div class="pane-label">Your Code</div>
+                    <textarea id="pythonEditor" spellcheck="false"></textarea>
+                </div>
+                <div class="output-pane">
+                    <div class="pane-label">Output</div>
+                    <pre id="pythonOutput"></pre>
+                </div>
+            </div>
+            <div class="ide-actions">
+                <button class="btn btn-primary" onclick="runPython()" id="runBtn">▶ Run Code</button>
+                <button class="btn btn-secondary" onclick="clearOutput()">Clear</button>
+                <span id="pyStatus" class="py-status"></span>
+            </div>
+        </div>
+    </div>
+
+    <button id="openIDE" class="ide-fab" onclick="openIDE()" title="Open Python Playground">🐍 Code</button>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/highlight.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/playground.js"></script>
+    <script defer src="katex/katex.min.js"></script>
+    <script defer src="katex/contrib/auto-render.min.js"></script>
+    <script defer src="js/quiz.js"></script>
+</body>
+</html>

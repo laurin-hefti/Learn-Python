@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Python Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="brand">🐍 Python Quiz Master</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Quizzes</a>
+                <a href="theory.html" class="nav-link">Theory</a>
+                <a href="playground.html" class="nav-link">Playground</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="admin.html" class="nav-link">Create</a>
+                <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="quiz-header">
+            <h1>📊 Your Progress Dashboard</h1>
+            <p>See everything you've learned and what's next.</p>
+        </div>
+        <div id="dashboardArea">
+            <p class="loading">Loading your dashboard...</p>
+        </div>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

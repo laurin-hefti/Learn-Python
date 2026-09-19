@@ -1,0 +1,1626 @@
+{
+  "quizzes": [
+    {
+      "id": "Python Syntax",
+      "title": "Komentare",
+      "category": "Python",
+      "description": "",
+      "questions": [
+        {
+          "type": "tf",
+          "text": "Ist das ein Kommentar?",
+          "answer": "false",
+          "sections": [
+            {
+              "type": "code",
+              "code": "print(\"hallo\")"
+            }
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Ist das ein Kommentar?",
+          "answer": "true",
+          "sections": [
+            {
+              "type": "code",
+              "code": "#print(\"hallo\")"
+            }
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Ist das ein KOmmentar?",
+          "answer": "true",
+          "sections": [
+            {
+              "type": "code",
+              "code": "\"\"\"\nprint(\"hallo\")\n\"\"\""
+            }
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was wird das Programm ausgeben?",
+          "answer": "hallo",
+          "sections": [
+            {
+              "type": "code",
+              "code": "\"\"\" \"\"\"print(\"hallo\")\n\n\"\"\"print(\"hallo1\")\"\"\"\n\n# # print(\"hallo2\")\n\n#print(\"hallo3\") #"
+            }
+          ],
+          "options": [
+            "hallo",
+            "hallo1",
+            "hallo2",
+            "hallo3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Variabeln",
+      "title": "Variabeln 1",
+      "description": "",
+      "category": "Python",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Was für ein Wert hat die Variable am Ende des Programms?",
+          "answer": "4",
+          "sections": [
+            {
+              "type": "code",
+              "code": "x = 5\n\nx = 1\n\nx = 4"
+            }
+          ],
+          "options": [
+            "5",
+            "1",
+            "4",
+            "2"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was hat die Variable x am ende des Programms für einen Wert?",
+          "answer": "5",
+          "sections": [
+            {
+              "type": "code",
+              "code": "x = 5\ny = x\nx = 4\nx = y\ny = 3"
+            }
+          ],
+          "options": [
+            "3",
+            "5",
+            "4",
+            "2"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was hat die Variable x am ende des Programms für einen Wert?",
+          "answer": "3",
+          "sections": [
+            {
+              "type": "code",
+              "code": "y = 4\nz = 3\nx = 2\ny = z\nx = y\ny = 4\nz = 2"
+            }
+          ],
+          "options": [
+            "3",
+            "4",
+            "3",
+            "5"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was hat die Variable x am Ende des Programmes für einen Wert?",
+          "answer": "3",
+          "sections": [
+            {
+              "type": "code",
+              "code": "x,y,z = 1,2,3\nx = y\ny = z\nx = y"
+            }
+          ],
+          "options": [
+            "2",
+            "3",
+            "1",
+            "4"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was ist der Wert der Variable x am Ende des Programms?",
+          "answer": "2",
+          "sections": [
+            {
+              "type": "code",
+              "code": "x = 2\ny = 5\nx,y = y,x\nz = 2\nx = y\nz = x"
+            }
+          ],
+          "options": [
+            "5",
+            "1",
+            "3",
+            "2"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Versuch eine Variable zu erstellen würde einen Fehler erzeugen?",
+          "answer": "for = 10",
+          "explanation": "for ist ein Wort welches bereits von Python verwendet wurde und kann somit nicht für einen Variablennamen verwendet werden.",
+          "options": [
+            "x = 5",
+            "x = \"hallo\"",
+            "x = 10e5",
+            "for = 10"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Versuch eine Variable zu erstellen würde einen Fehler erzeugen?",
+          "answer": "x%a = 10",
+          "explanation": "Es dürfen keine Sonderzeichen wie %, &, #  in einer Variabel verwendet werden.",
+          "options": [
+            "x%a = 10",
+            "x = [1,2]",
+            "x_y_z = 4",
+            "x = 1"
+          ]
+        },
+        {
+          "type": "fill",
+          "text": "Erstellen sie eine Variable mit dem Namen var und dem Wert 5",
+          "answer": "x = 5"
+        },
+        {
+          "type": "fill",
+          "text": "Erstellen sie zwei Variabeln mit dem Namen x und y mit dem jeweiligem Wert 2 und 3 auf einer Linie.",
+          "answer": "x,y = 2,3"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreiben Sie Code, in dem zwei Variablen x und y erstellt werden, sodass x den Wert 2 und y den Wert 3 hat. Andere Zeilen sind erlaubt, aber diese beiden Zuordnungen müssen vorkommen.",
+          "answer": null,
+          "required": [
+            "x = 2",
+            "y = 3"
+          ],
+          "minMatches": 2,
+          "starter": "yz = 1\n"
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Datentypen",
+      "title": "Datentypen 1",
+      "description": "Integers, Floats und Strings",
+      "category": "Python",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Welches der folgenden Variablen ist ein Float.",
+          "answer": "x = 10/2",
+          "explanation": "Eine Division erzeugt immer einen Float.",
+          "options": [
+            "x = 10",
+            "x = \"hallo\"",
+            "x = 10/2",
+            "x = 2"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was ist der der Wert der Variabel x am Ende des Programms?",
+          "answer": "54",
+          "sections": [
+            {
+              "type": "code",
+              "code": "x = 4\ny = 5\nx = x + y\nx = x * 6"
+            }
+          ],
+          "explanation": "(4+5)*6 = 54",
+          "options": [
+            "54",
+            "63",
+            "47",
+            "34"
+          ]
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreiben sie einen Code welcher der String \" xyz\" zu \"abc\" umwandelt.",
+          "required": [
+            "x = x.strip()",
+            "x = x.replace(\"x\",\"a\")",
+            "x = x.replace(\"y\",\"b\")",
+            "x = x.replace(\"z\",\"c\")"
+          ],
+          "minMatches": 4,
+          "starter": "x = \" xyz\""
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist der Output dieses Codes?",
+          "answer": "abcd",
+          "code": "x = \"abcd\"\nprint(x[:])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist der Output dieses Programmes?",
+          "answer": "abcd",
+          "code": "x = \"abcdefg\"\nprint(x[:4])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "bcde",
+          "code": "x = \"abcdefg\"\nprint(a[1:5])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Codes?",
+          "answer": "hallomax",
+          "code": "x = \"hallo \"\nx = x.strip()\ny = \"max\"\nx = x + y\nprint(x)"
+        },
+        {
+          "type": "tf",
+          "text": "Hat ein Integer in Python ein oberes/unteres Limit?",
+          "answer": "false",
+          "explanation": "Python Integers haben keine feste Obergrenze, der einzige limitierende Faktor ist Arbeitsspeicher."
+        },
+        {
+          "type": "code_output",
+          "text": "Schreiben sie einen Code welcher den String Ausgibt und anschliessend den letzten Buchstaben entfernt, wiederholen sie das bis der String leer ist.",
+          "expected": "abcd\nabc\nab\na",
+          "starter": "x = \"abcd\"",
+          "explanation": "Beispiel:\nprint(x)\nx = x[:3]\nprint(x)\nx = x[:2]\nprint(x)\nx = x[:1]\nprint(x)"
+        },
+        {
+          "type": "code_output",
+          "text": "Schreiben sie eine Code welcher folgdende Ausgabe gibt:\nhallo Max ich bin 20 Jahre alt",
+          "expected": "hallo Max ich bin 20 Jahre alt",
+          "starter": "x = \"hallo\"\ny = \"Max\"\nz = \" ich bin \"\na = 10\nb = \" Jahre alt\"",
+          "explanation": "Beispiel:\nprint(x + \" \"+ y + z + f\"{a}\" + b)"
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Python_Einleitung",
+      "title": "Python Einführung – Quiz (KI generiert)",
+      "description": "Fragen zur Einführung in Python und zur Programmiersprache.",
+      "category": "Python",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Was ist eine Programmiersprache?",
+          "answer": "Ein Regelwerk mit Anweisungen, die der Mensch verstehen kann",
+          "options": [
+            "Ein Regelwerk mit Anweisungen, die der Mensch verstehen kann",
+            "Eine physische Maschine",
+            "Ein Betriebssystem",
+            "Ein Datentyp"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Ein Computer versteht Python-Anweisungen direkt, ohne Übersetzung.",
+          "answer": "false",
+          "explanation": "Ein Compiler oder Interpreter wandelt die Anweisungen in binären Code um (0 und 1)."
+        },
+        {
+          "type": "mc",
+          "text": "Wie kann man Python ausführen?",
+          "answer": "Auf dieser Webseite, online oder mit einem selbst installierten Interpreter",
+          "options": [
+            "Auf dieser Webseite, online oder mit einem selbst installierten Interpreter",
+            "Nur auf dieser Webseite",
+            "Nur mit Microsoft Word",
+            "Nur auf Android"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Vorteil wird für Python genannt?",
+          "answer": "Man kann komplexe Programme schon mit wenigen Zeilen Code verwirklichen",
+          "options": [
+            "Man kann komplexe Programme schon mit wenigen Zeilen Code verwirklichen",
+            "Python ist schneller als C++",
+            "Python braucht sehr wenig Arbeitsspeicher",
+            "Python hat keine Bibliotheken"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "hello world",
+          "code": "print(\"hello world\")"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe ein Programm, das mit print() den Text 'Hallo Python' ausgibt. Dein Code muss die print-Anweisung enthalten.",
+          "required": [
+            "print(\"Hallo Python\")"
+          ],
+          "minMatches": 1
+        },
+        {
+          "type": "tf",
+          "text": "Python kann auch verwendet werden, um KI-Modelle zu erstellen und zu trainieren.",
+          "answer": "true"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "8",
+          "code": "print(5 + 3)"
+        },
+        {
+          "type": "tf",
+          "text": "Python funktioniert offline, wenn man es sich selbst auf dem Gerät installiert hat.",
+          "answer": "true"
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Python Syntax (KI)",
+      "title": "Python Syntax – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Teste dein Wissen zu Syntax und Kommentaren.",
+      "questions": [
+        {
+          "type": "tf",
+          "text": "Ein Kommentar wird von Python tatsächlich ausgeführt.",
+          "answer": "false",
+          "explanation": "Python ignoriert Kommentare, es entsteht kein Fehler."
+        },
+        {
+          "type": "tf",
+          "text": "Kommentare können mit # oder mit drei Anführungszeichen (\"\"\" ... \"\"\") erstellt werden.",
+          "answer": "true"
+        },
+        {
+          "type": "mc",
+          "text": "Mit welchem Zeichen beginnt ein einzeiliger Kommentar?",
+          "answer": "#",
+          "options": [
+            "#",
+            "//",
+            "--",
+            "/*"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "hallo",
+          "code": "print(\"hallo\") # Das ist ein Kommentar"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "hallo",
+          "code": "\"\"\"\nprint(\"hallo1\")\n\"\"\"\nprint(\"hallo\")",
+          "explanation": "Der Text zwischen den drei Anführungszeichen ist ein Docstring und wird ignoriert."
+        },
+        {
+          "type": "mc",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "(nichts)",
+          "options": [
+            "(nichts)",
+            "hallo",
+            "print(\"hallo\")",
+            "Fehler"
+          ],
+          "code": "#print(\"hallo\")"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "hallo",
+          "code": "# print(\"hallo\")\nprint(\"hallo\")"
+        },
+        {
+          "type": "mc",
+          "text": "Was ist der Syntax einer Programmiersprache?",
+          "answer": "Die feste Struktur, von welcher nicht abgewichen werden darf",
+          "options": [
+            "Die feste Struktur, von welcher nicht abgewichen werden darf",
+            "Die Geschwindigkeit des Codes",
+            "Die Farbe des Codes",
+            "Die Grösse des Programms"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Ein vergessener Punkt oder eine vergessene Zeichenfolge kann die Bedeutung eines Programms verändern.",
+          "answer": "true"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe ein Programm, das einen Kommentar mit '#' UND eine print-Anweisung enthält, die 'Kommentar' ausgibt.",
+          "required": [
+            "#",
+            "print(\"Kommentar\")"
+          ],
+          "minMatches": 2,
+          "starter": ""
+        },
+        {
+          "type": "fill",
+          "text": "Was nennt man einen mehrzeiligen Kommentar (mit drei Anführungszeichen) in der Fachsprache?",
+          "answer": "docstring",
+          "explanation": "Einen mehrzeiligen Kommentar nennt man Docstring."
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "",
+          "code": "\"\"\"\nprint(\"versteckt\")\n\"\"\""
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Datentypen (KI)",
+      "title": "Datentypen – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu Integer, Float, String, Format Strings und Slicing.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Mit welchem Befehl findet man den Datentyp einer Variable heraus?",
+          "answer": "type(x)",
+          "options": [
+            "type(x)",
+            "kind(x)",
+            "size(x)",
+            "class(x)"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "In Python muss bei jeder Variable der Datentyp explizit angegeben werden.",
+          "answer": "false",
+          "explanation": "Python kann jede Variable dynamisch zwischen den Datentypen wechseln."
+        },
+        {
+          "type": "mc",
+          "text": "Welche der folgenden Variablen ist ein Float?",
+          "answer": "x = 10.0",
+          "options": [
+            "x = 10.0",
+            "x = 10",
+            "x = \"10\"",
+            "x = True"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was ist das Resultat von y / x, wenn x und y Integer sind?",
+          "answer": "Das Resultat ist vom Typ float",
+          "options": [
+            "Das Resultat ist vom Typ float",
+            "Das Resultat ist vom Typ int",
+            "Das Resultat ist vom Typ string",
+            "Es gibt einen Fehler"
+          ],
+          "explanation": "Die Division erzeugt immer ein Resultat vom Typ float."
+        },
+        {
+          "type": "tf",
+          "text": "Integer in Python haben keine feste Obergrenze (kein Overflow).",
+          "answer": "true",
+          "explanation": "Die einzige Grenze ist der verfügbare Arbeitsspeicher."
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "<class 'float'>",
+          "code": "x = 10.0\nprint(type(x))"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "30",
+          "code": "x = 10\ny = 20\nz = x + y\nprint(z)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "200",
+          "code": "x = 10\ny = 20\nprint(x * y)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "10!",
+          "code": "x = 10\nprint(str(x) + \"!\")"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "HALLO",
+          "code": "a = \"hallo\"\nprint(a.upper())"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "Jallo",
+          "code": "a = \"hallo\"\nprint(a.replace(\"h\", \"J\"))"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "abc",
+          "code": "a = \"abcdefg\"\nprint(a[:3])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "bcdefg",
+          "code": "a = \"abcdefg\"\nprint(a[1:])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "d",
+          "code": "a = \"abcdefg\"\nprint(a[3])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "Er ist 20 Jahre alt",
+          "code": "age = 20\nx = f\"Er ist {age} Jahre alt\"\nprint(x)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "hallo ich bin 10 Jahre alt",
+          "code": "z = \"10\"\ns = \"hallo ich bin \" + z + \" Jahre alt\"\nprint(s)"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe einen Code, der den String a in Grossbuchstaben umwandelt und ausgibt. Dein Code muss a.upper() enthalten.",
+          "required": [
+            "a.upper()"
+          ],
+          "minMatches": 1,
+          "starter": "a = \"hallo\""
+        },
+        {
+          "type": "fill",
+          "text": "Schreibe einen Format String, der die Variable age (20) in den Satz 'Er ist 20 Jahre alt' einfügt.",
+          "answer": "f\"Er ist {age} Jahre alt\""
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Datentypen 2",
+      "title": "Datentypen 2 – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu Booleans, NoneType, Listen und Datentyp-Konvertierung.",
+      "questions": [
+        {
+          "type": "tf",
+          "text": "Ein Boolean kann nur die Werte True oder False haben.",
+          "answer": "true"
+        },
+        {
+          "type": "tf",
+          "text": "Der NoneType wird verwendet, um eine uninitialisierte Variable zu kennzeichnen.",
+          "answer": "true"
+        },
+        {
+          "type": "mc",
+          "text": "Mit welchen Klammern wird eine Liste erstellt?",
+          "answer": "[]",
+          "options": [
+            "[]",
+            "()",
+            "{}",
+            "<>"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "In einer Liste können unterschiedliche Datentypen gemischt werden.",
+          "answer": "true"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "Apfel",
+          "code": "x = [\"Apfel\", \"Orange\", \"Banane\"]\nprint(x[0])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "2",
+          "code": "l = [[1,2],[\"Auto\", \"Haus\"]]\nprint(l[0][1])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "[2, 3, 4]",
+          "code": "y = [1,2,3,4,5,6,7,8,9]\nprint(y[1:4])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "9",
+          "code": "y = [1,2,3,4,5,6,7,8,9]\nprint(y[-1])"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "[1, 2, 1, 4, 5]",
+          "code": "x = [1,2,3,4,5]\nx[2] = 1\nprint(x)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "[1, 2, 3, 7]",
+          "code": "x = [1,2,3]\nx.append(7)\nprint(x)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "[1, 2, 3, 5, 6, 8]",
+          "code": "x = [1,3,2,8,5,6]\nx.sort()\nprint(x)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "[1, 3, 4]",
+          "code": "x = [1,2,3,4]\nx.pop(1)\nprint(x)"
+        },
+        {
+          "type": "tf",
+          "text": "Mit y = x wird eine Liste kopiert, sodass x und y danach unabhängig sind.",
+          "answer": "false",
+          "explanation": "y = x erstellt kein neues Objekt. Zum Kopieren verwendet man x.copy(), x[:] oder list(x)."
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "[1, 2, 3, 1, 2, 3]",
+          "code": "x = [1,2,3]\ny = x.copy()\nz = x + y\nprint(z)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was sind die Datentypen dieser Ausgaben?",
+          "answer": "<class 'int'>\n<class 'str'>",
+          "code": "x = 10\nprint(type(x))\nz = str(x)\nprint(type(z))"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "hallo ich bin 10 Jahre alt",
+          "code": "z = str(10)\ns = \"hallo ich bin \" + z + \" Jahre alt\"\nprint(s)"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe Code, der eine Liste x erstellt und mit append den Wert 9 ans Ende anhängt.",
+          "required": [
+            "x = [1,2,3]",
+            "x.append(9)"
+          ],
+          "minMatches": 2,
+          "starter": ""
+        },
+        {
+          "type": "code_output",
+          "text": "Schreibe ein Programm, das eine Liste x erstellt, sie mit x.sort() sortiert und danach ausgibt.",
+          "expected": "[1, 2, 3]",
+          "starter": "x = [3,1,2]"
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Eingaben",
+      "title": "Eingaben – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zur input()-Funktion und zur Umwandlung von Eingaben.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Mit welcher Funktion kann der Benutzer eine Eingabe machen?",
+          "answer": "input()",
+          "options": [
+            "input()",
+            "read()",
+            "get()",
+            "ask()"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "input() wartet, bis der Benutzer etwas eingibt und mit Enter bestätigt.",
+          "answer": "true"
+        },
+        {
+          "type": "mc",
+          "text": "Was gibt input() immer zurück, auch wenn der Benutzer eine Zahl eingibt?",
+          "answer": "Einen String",
+          "options": [
+            "Einen String",
+            "Einen Integer",
+            "Einen Float",
+            "Einen Boolean"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Wofür wird der Text zwischen den Klammern von input('Wie heisst du? ') verwendet?",
+          "answer": "Er wird als Prompt vor der Eingabe ausgegeben",
+          "options": [
+            "Er wird als Prompt vor der Eingabe ausgegeben",
+            "Er wird ignoriert",
+            "Er bestimmt den Datentyp",
+            "Er wird als Ergebnis gespeichert"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Wie rechnet man mit einer Zahl, die der Benutzer eingegeben hat?",
+          "answer": "Mit int() oder float() umwandeln",
+          "options": [
+            "Mit int() oder float() umwandeln",
+            "Direkt funktioniert das immer",
+            "Mit str() umwandeln",
+            "Man kann damit nicht rechnen"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Fehler entsteht, wenn der Benutzer 'abc' eingibt und int() aufgerufen wird?",
+          "answer": "ValueError",
+          "options": [
+            "ValueError",
+            "TypeError",
+            "NameError",
+            "SyntaxError"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Wie lässt sich die Eingabe direkt in einen Integer umwandeln?",
+          "answer": "alter = int(input(\"Wie alt bist du? \"))",
+          "options": [
+            "alter = int(input(\"Wie alt bist du? \"))",
+            "alter = str(input(\"Wie alt bist du? \"))",
+            "alter = input(\"Wie alt bist du? \").int()",
+            "alter = int(print(\"Wie alt bist du? \"))"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Um eine Kommazahl einzulesen, verwendet man float().",
+          "answer": "true"
+        },
+        {
+          "type": "code_predict",
+          "text": "Welchen Typ hat der Wert von alter (Eingabe '5')?",
+          "answer": "<class 'str'>",
+          "code": "alter = input(\"Wie alt bist du? \")"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe ein Programm, das den Namen mit input() einliest und den Namen danach mit print ausgibt. Dein Code muss input( und print( enthalten.",
+          "required": [
+            "input(",
+            "print("
+          ],
+          "minMatches": 2,
+          "starter": ""
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe Code, der eine Zahl einliest und direkt mit int() in einen Integer umwandelt (z.B. alter = int(input(...))).",
+          "required": [
+            "int(input("
+          ],
+          "minMatches": 1,
+          "starter": ""
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Python Operatoren",
+      "title": "Operatoren – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu arithmetischen, vergleichenden, logischen und anderen Operatoren.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Was bewirkt x += 5?",
+          "answer": "x wird um 5 erhöht",
+          "options": [
+            "x wird um 5 erhöht",
+            "x wird auf 5 gesetzt",
+            "x wird mit 5 multipliziert",
+            "x wird gelöscht"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "15",
+          "code": "x = 5\nx += 10\nprint(x)"
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Operator berechnet die Potenz?",
+          "answer": "**",
+          "options": [
+            "**",
+            "^",
+            "^ 2",
+            "%"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was bewirkt // ?",
+          "answer": "Ganzzahldivision ohne Rest",
+          "options": [
+            "Ganzzahldivision ohne Rest",
+            "Gewöhnliche Division",
+            "Restdivision",
+            "Multiplikation"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was berechnet der %-Operator?",
+          "answer": "Den Rest einer Division",
+          "options": [
+            "Den Rest einer Division",
+            "Den Mittelwert",
+            "Die Potenz",
+            "Die Wurzel"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieser Berechnung?",
+          "answer": "3",
+          "code": "print(10 // 3)"
+        },
+        {
+          "type": "mc",
+          "text": "Welchen Datentyp geben vergleichende Operatoren zurück?",
+          "answer": "Boolean (True oder False)",
+          "options": [
+            "Boolean (True oder False)",
+            "Integer",
+            "String",
+            "Float"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Ausdrucks?",
+          "answer": "True",
+          "code": "print(10 == 10)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Ausdrucks?",
+          "answer": "True",
+          "code": "x = 10\ny = 20\nprint(x != y)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Ausdrucks?",
+          "answer": "False",
+          "code": "x = 10\ny = 20\nprint(x > y)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Ausdrucks?",
+          "answer": "True",
+          "code": "print(True and True)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Ausdrucks?",
+          "answer": "True",
+          "code": "print(not False)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Ausdrucks?",
+          "answer": "True",
+          "code": "print(True or False)"
+        },
+        {
+          "type": "tf",
+          "text": "Direkt eingebaut sind unter anderem die logischen Operatoren and, or und not.",
+          "answer": "true"
+        },
+        {
+          "type": "mc",
+          "text": "Mit welchem Operator kann man direkt überprüfen, ob etwas in einer Liste enthalten ist?",
+          "answer": "in",
+          "options": [
+            "in",
+            "is",
+            "contains",
+            "has"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "True",
+          "code": "x = [1,2,3]\nprint(2 in x)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "False",
+          "code": "x = [1,2,3]\nprint(5 in x)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programs?",
+          "answer": "True",
+          "code": "x = [1,2,3]\ny = x\nprint(x is y)"
+        },
+        {
+          "type": "mc",
+          "text": "Welche Rechnung führt Python zuerst aus, wenn keine Klammern gesetzt sind?",
+          "answer": "Multiplikation vor Addition",
+          "options": [
+            "Multiplikation vor Addition",
+            "Addition vor Multiplikation",
+            "Immer von rechts nach links",
+            "Immer von links nach rechts"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieser Berechnung?",
+          "answer": "14",
+          "code": "print(2 + 3 * 4)"
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Conditions",
+      "title": "Conditions – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu if, elif, else und Einrückung.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Wie erkennt Python, wo ein bedingter Codeblock endet?",
+          "answer": "Am Einrücken des Codes",
+          "options": [
+            "Am Einrücken des Codes",
+            "Am Schlüsselwort end",
+            "An geschweiften Klammern",
+            "Am Semikolon"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Code, der zur Bedingung gehört, muss weiter rechts sein als der Rest.",
+          "answer": "true"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "x ist kleiner",
+          "code": "x = 10\ny = 20\nif x > y:\n    print(\"x ist grösser\")\nelif x == y:\n    print(\"x ist gleich gross\")\nelse:\n    print(\"x ist kleiner\")"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "x",
+          "code": "x = 10\ny = 5\nif x > y:\n    print(\"x\")\nelse:\n    print(\"y\")"
+        },
+        {
+          "type": "mc",
+          "text": "Wann wird eine elif-Bedingung ausgeführt?",
+          "answer": "Wenn ihre Bedingung erfüllt ist und keine vorherige Bedingung erfüllt wurde",
+          "options": [
+            "Wenn ihre Bedingung erfüllt ist und keine vorherige Bedingung erfüllt wurde",
+            "Immer, auch wenn eine andere Bedingung erfüllt wurde",
+            "Nur wenn alle anderen falsch sind",
+            "Niemals"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Man kann beliebig viele elif-Bedingungen haben, solange die erste ein if ist.",
+          "answer": "true"
+        },
+        {
+          "type": "tf",
+          "text": "Sobald ein if oder elif erfüllt wurde, werden die folgenden Bedingungen übersprungen.",
+          "answer": "true"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "x ist grösser als 10\nx ist nicht grösser als 20",
+          "code": "x = 20\nif x > 10:\n    print(\"x ist grösser als 10\")\n    if x > 20:\n        print(\"x ist grösser als 20\")\n    else:\n        print(\"x ist nicht grösser als 20\")\nelse:\n    print(\"x ist nicht grösser als 10\")"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "10",
+          "code": "x = 10\ny = 20\nif x > y:\n    print(\"x ist grösser\")\nprint(x)"
+        },
+        {
+          "type": "tf",
+          "text": "Mit dem Keyword pass kann man einen Codeblock leer lassen.",
+          "answer": "true",
+          "explanation": "pass macht nichts."
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe ein if-Statement, das prüft, ob x grösser als 5 ist, und in diesem Fall 'gross' ausgibt. Dein Code muss 'if x > 5:' und print(\"gross\") enthalten.",
+          "required": [
+            "if x > 5:",
+            "print(\"gross\")"
+          ],
+          "minMatches": 2,
+          "starter": "x = 10"
+        },
+        {
+          "type": "fill",
+          "text": "Schreibe eine Bedingung, die prüft, ob x gleich y ist (verwende ==).",
+          "answer": "x == y"
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Schleifen",
+      "title": "Schleifen – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu for- und while-Schleifen, range, break und continue.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Welche zwei Schleifenarten gibt es in Python?",
+          "answer": "for und while",
+          "options": [
+            "for und while",
+            "if und else",
+            "loop und repeat",
+            "switch und case"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "a\nb\nc",
+          "code": "x = [\"a\", \"b\", \"c\"]\nfor i in x:\n    print(i)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "0\n2\n4\n6\n8",
+          "code": "for i in range(0, 10, 2):\n    print(i)",
+          "explanation": "range(Start, Ende exklusiv, Schritt) – hier Start 0, Ende 10, Schritt 2."
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+          "code": "for i in range(10):\n    print(i)",
+          "explanation": "range ohne Parameter startet bei 0: range(10) liefert 0 bis 9."
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "a\nb",
+          "code": "x = [\"a\", \"b\", \"c\"]\nfor i in x:\n    if i == \"c\":\n        break\n    print(i)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "a\nb\nd\ne\nf",
+          "code": "x = [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]\nfor i in x:\n    if i == \"c\":\n        continue\n    print(i)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "0\n1\n2\nall done",
+          "code": "for i in range(3):\n    if i == 9:\n        break\n    print(i)\nelse:\n    print(\"all done\")",
+          "explanation": "Das else wird ausgeführt, wenn die Schleife NICHT mit break gestoppt wurde."
+        },
+        {
+          "type": "tf",
+          "text": "Das Keyword break bricht die Schleife sofort ab.",
+          "answer": "true"
+        },
+        {
+          "type": "tf",
+          "text": "continue beendet nur den jetzigen Durchgang, nicht die ganze Schleife.",
+          "answer": "true"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "0\n1\n2\n3\n4",
+          "code": "i = 0\nwhile i < 5:\n    print(i)\n    i += 1"
+        },
+        {
+          "type": "tf",
+          "text": "while True läuft unendlich lange.",
+          "answer": "true"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe eine for-Schleife, die alle Zahlen von 0 bis 4 ausgibt. Dein Code muss 'for i in range(5):' und print(i) enthalten.",
+          "required": [
+            "for i in range(5):",
+            "print(i)"
+          ],
+          "minMatches": 2,
+          "starter": ""
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe eine while-Schleife, die i von 0 auszählt, solange i < 5 ist, und i mit print ausgibt. Dein Code muss while, print(i) und i += 1 enthalten.",
+          "required": [
+            "while i < 5:",
+            "print(i)",
+            "i += 1"
+          ],
+          "minMatches": 3,
+          "starter": "i = 0"
+        },
+        {
+          "type": "code_output",
+          "text": "Schreibe ein Programm, das mit einer for-Schleife die Zahlen 0 bis 4 untereinander ausgibt.",
+          "expected": "0\n1\n2\n3\n4",
+          "starter": ""
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Python Funktionen",
+      "title": "Funktionen – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu Funktionen, Parametern, return und Scope.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Mit welchem Keyword beginnt die Definition einer Funktion?",
+          "answer": "def",
+          "options": [
+            "def",
+            "function",
+            "func",
+            "define"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "3\n3",
+          "code": "def my_function():\n    x = 1\n    y = 2\n    z = x + y\n    print(z)\n\nmy_function()\nmy_function()"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "9",
+          "code": "def add_function(x, y):\n    print(x + y)\n\nadd_function(5, 4)"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "1",
+          "code": "def sub_function(x, y):\n    return x - y\n\nprint(sub_function(5, 4))"
+        },
+        {
+          "type": "mc",
+          "text": "Was bewirkt das Keyword return?",
+          "answer": "Gibt den Wert zurück, der hinter return steht",
+          "options": [
+            "Gibt den Wert zurück, der hinter return steht",
+            "Bricht das Programm ab",
+            "Druckt den Wert aus",
+            "Löscht die Funktion"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "print() ist ebenfalls eine bereits vordefinierte Funktion.",
+          "answer": "true"
+        },
+        {
+          "type": "tf",
+          "text": "Eine Funktion ist nur genau einmal aufrufbar.",
+          "answer": "false",
+          "explanation": "Eine Funktion ist beliebig oft aufrufbar."
+        },
+        {
+          "type": "mc",
+          "text": "Wo wird eine globale Variable erstellt?",
+          "answer": "Im Hauptkörper des Programms",
+          "options": [
+            "Im Hauptkörper des Programms",
+            "Immer innerhalb einer Funktion",
+            "Nur in einer Schleife",
+            "Nur in einem Modul"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "3\n5",
+          "code": "x = 5\n\ndef my_function():\n    x = 3\n    print(x)\n\nmy_function()\nprint(x)",
+          "explanation": "Lokale Variablen haben innerhalb der Funktion eine höhere Priorität. Ausserhalb gilt die globale Variable (5)."
+        },
+        {
+          "type": "tf",
+          "text": "Eine lokale Variable ist nur bis zum Ende ihres Codeblocks gültig.",
+          "answer": "true"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe eine Funktion, die zwei Zahlen addiert und die Summe mit print ausgibt. Dein Code muss die Funktionsdefinition enthalten.",
+          "required": [
+            "def add_function(x, y):",
+            "print(x + y)"
+          ],
+          "minMatches": 2,
+          "starter": ""
+        },
+        {
+          "type": "code_output",
+          "text": "Schreibe eine Funktion add(5, 4), die die Summe 9 ausgibt, und rufe sie auf.",
+          "expected": "9",
+          "starter": ""
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Python Recursion",
+      "title": "Rekursion – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu rekursiven Funktionen und der Abbruchbedingung.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Was ist Rekursion?",
+          "answer": "Wenn sich eine Funktion in sich selber aufruft",
+          "options": [
+            "Wenn sich eine Funktion in sich selber aufruft",
+            "Wenn eine Funktion eine andere aufruft",
+            "Wenn eine Schleife eine andere enthält",
+            "Wenn ein Programm sich beendet"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Eine rekursive Funktion braucht immer eine Abbruchbedingung.",
+          "answer": "true",
+          "explanation": "Ohne Abbruchbedingung würde sich die Funktion unendlich oft selbst aufrufen."
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "13",
+          "code": "def fib(n):\n    if n <= 1:\n        return n\n    return fib(n - 1) + fib(n - 2)\n\nprint(fib(7))"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "5",
+          "code": "def fib(n):\n    if n <= 1:\n        return n\n    return fib(n - 1) + fib(n - 2)\n\nprint(fib(5))"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "1",
+          "code": "def f(n):\n    if n <= 1:\n        return n\n    return f(n - 1) + f(n - 2)\n\nprint(f(2))"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "3\n2\n1",
+          "code": "def countdown(n):\n    if n <= 0:\n        return\n    print(n)\n    countdown(n - 1)\n\ncountdown(3)"
+        },
+        {
+          "type": "tf",
+          "text": "Ab einer gewissen Rekursionstiefe gibt Python einen Fehler aus.",
+          "answer": "true"
+        },
+        {
+          "type": "tf",
+          "text": "Der Vorteil von Rekursion ist, dass man gewisse Probleme sehr übersichtlich lösen kann.",
+          "answer": "true"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe eine rekursive Fibonacci-Funktion, die mit der Abbruchbedingung 'if n <= 1:' beginnt und fib(n - 1) + fib(n - 2) zurückgibt.",
+          "required": [
+            "def fib(n):",
+            "if n <= 1:",
+            "return fib(n - 1) + fib(n - 2)"
+          ],
+          "minMatches": 3,
+          "starter": ""
+        },
+        {
+          "type": "code_output",
+          "text": "Schreibe eine rekursive Funktion, die von 3 herunterzählt und jede Zahl (3, 2, 1) untereinander ausgibt.",
+          "expected": "3\n2\n1",
+          "starter": ""
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Errors",
+      "title": "Errors – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu den häufigsten Python-Fehlern.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Welcher Fehler entsteht bei einem Grammatik- oder Strukturfehler im Code?",
+          "answer": "SyntaxError",
+          "options": [
+            "SyntaxError",
+            "TypeError",
+            "NameError",
+            "ValueError"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was zeigt die letzte Zeile einer Fehlermeldung?",
+          "answer": "Die Zeile im Code und die Art des Fehlers",
+          "options": [
+            "Die Zeile im Code und die Art des Fehlers",
+            "Den Namen des Programms",
+            "Die Anzahl der Zeilen",
+            "Den Speicherverbrauch"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Fehler tritt bei falschen/unvollständigen Einrückungen auf?",
+          "answer": "IndentationError",
+          "options": [
+            "IndentationError",
+            "SyntaxError",
+            "TypeError",
+            "NameError"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Fehler tritt auf, wenn man eine Zahl und einen String addieren möchte?",
+          "answer": "TypeError",
+          "options": [
+            "TypeError",
+            "ValueError",
+            "NameError",
+            "IndexError"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Fehler tritt auf, wenn eine Variable nicht definiert oder falsch geschrieben ist?",
+          "answer": "NameError",
+          "options": [
+            "NameError",
+            "SyntaxError",
+            "TypeError",
+            "ValueError"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Fehler tritt bei int('a') auf?",
+          "answer": "ValueError",
+          "options": [
+            "ValueError",
+            "TypeError",
+            "SyntaxError",
+            "IndexError"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Fehler tritt auf, wenn man auf ein Element ausserhalb einer Liste zugreift?",
+          "answer": "IndexError",
+          "options": [
+            "IndexError",
+            "ValueError",
+            "NameError",
+            "TypeError"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Fehler tritt auf, wenn man durch null teilen möchte?",
+          "answer": "ZeroDivisionError",
+          "options": [
+            "ZeroDivisionError",
+            "ValueError",
+            "IndexError",
+            "NameError"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Ein Fehler beim Ausführen beschädigt dein Gerät.",
+          "answer": "false",
+          "explanation": "Ein Fehler hinterlässt keinen Schaden; das Programm bricht einfach ab."
+        },
+        {
+          "type": "mc",
+          "text": "Welcher Fehler tritt bei diesem Programm auf?",
+          "answer": "NameError",
+          "options": [
+            "NameError",
+            "SyntaxError",
+            "TypeError",
+            "ZeroDivisionError"
+          ],
+          "code": "print(x)"
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe einen Code, der sicher einen ZeroDivisionError auslöst (z.B. eine Division durch 0).",
+          "required": [
+            "/ 0"
+          ],
+          "minMatches": 1,
+          "starter": ""
+        }
+      ],
+      "shuffle": true
+    },
+    {
+      "id": "Modules",
+      "title": "Module – Quiz (KI generiert)",
+      "category": "Python",
+      "description": "Fragen zu Modulen, Bibliotheken und import.",
+      "questions": [
+        {
+          "type": "mc",
+          "text": "Was sind Module in Python?",
+          "answer": "Erweiterungen der Basissprache (Bibliotheken)",
+          "options": [
+            "Erweiterungen der Basissprache (Bibliotheken)",
+            "Fehlermeldungen",
+            "Dateien des Compilers",
+            "Kommentare"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Wie importiert man die math-Bibliothek mit Modulnamen?",
+          "answer": "import math",
+          "options": [
+            "import math",
+            "use math",
+            "include math",
+            "math import"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was bewirkt 'from math import *'?",
+          "answer": "Es importiert alles aus math, ohne Modulnamen verwenden zu müssen",
+          "options": [
+            "Es importiert alles aus math, ohne Modulnamen verwenden zu müssen",
+            "Es importiert gar nichts",
+            "Es erzeugt einen Fehler",
+            "Es importiert nur eine Funktion"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Was bewirkt 'from math import sin'?",
+          "answer": "Es importiert nur die Funktion sin",
+          "options": [
+            "Es importiert nur die Funktion sin",
+            "Es importiert alles ausser sin",
+            "Es löscht die Funktion sin",
+            "Es gibt einen Fehler"
+          ]
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "0.0",
+          "code": "import math\nprint(math.sin(0))"
+        },
+        {
+          "type": "code_predict",
+          "text": "Was ist die Ausgabe dieses Programms?",
+          "answer": "0.0",
+          "code": "from math import sin\nprint(sin(0))"
+        },
+        {
+          "type": "mc",
+          "text": "Welche Bibliothek eignet sich für Matrizen und numerische Berechnungen?",
+          "answer": "Numpy",
+          "options": [
+            "Numpy",
+            "Mathplotlib",
+            "random",
+            "time"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welche Bibliothek eignet sich, um Daten in Diagrammen darzustellen?",
+          "answer": "Mathplotlib",
+          "options": [
+            "Mathplotlib",
+            "Numpy",
+            "random",
+            "datetime"
+          ]
+        },
+        {
+          "type": "mc",
+          "text": "Welche Bibliothek ist nützlich, um zufällige Zahlen zu generieren?",
+          "answer": "random",
+          "options": [
+            "random",
+            "math",
+            "Numpy",
+            "Mathplotlib"
+          ]
+        },
+        {
+          "type": "tf",
+          "text": "Im Playground dieser Webseite können alle Module importiert werden.",
+          "answer": "false",
+          "explanation": "Einige Module werden von Drittanbietern bereitgestellt und sind im Playground nicht verfügbar."
+        },
+        {
+          "type": "tf",
+          "text": "Man sollte aufpassen, eigene Funktionen nicht mit Modul-Funktionen zu überschreiben.",
+          "answer": "true"
+        },
+        {
+          "type": "fill",
+          "text": "Wie installiert man ein Modul auf dem eigenen Computer?",
+          "answer": "pip install \"Modulname\""
+        },
+        {
+          "type": "code_contains",
+          "text": "Schreibe Code, der math importiert und math.sqrt(9) verwendet. Dein Code muss 'import math' enthalten.",
+          "required": [
+            "import math"
+          ],
+          "minMatches": 1,
+          "starter": "print(math.sqrt(9))"
+        }
+      ],
+      "shuffle": true
+    }
+  ]
+}

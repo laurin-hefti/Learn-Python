@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create - Python Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="brand">🐍 Python Quiz Master</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Quizzes</a>
+                <a href="theory.html" class="nav-link">Theory</a>
+                <a href="playground.html" class="nav-link">Playground</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="admin.html" class="nav-link">Create</a>
+                <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="admin-header">
+            <h1>➕ Create Content</h1>
+            <div class="admin-actions">
+                <a href="index.html" class="btn btn-secondary">← Back</a>
+            </div>
+        </div>
+
+        <div id="editingIndicator" class="editing-indicator" style="display:none;"></div>
+
+        <div class="info-panel">
+            <h3>💡 How it works</h3>
+            <p>This tool helps you build content and <strong>exports it as JSON</strong>. To add it to your website:</p>
+            <ol>
+                <li>Choose <strong>Quiz</strong>, <strong>Theory</strong> or <strong>Markdown Theory</strong> below.</li>
+                <li>Build your content (a quiz needs a unique ID, a theory topic needs an ID too).</li>
+                <li>Click <strong>"🧩 Merge &amp; Download"</strong> — it reads the existing <code>data/quizzes.json</code> (or <code>data/theory.json</code>), appends your new item, and downloads the complete updated file.</li>
+                <li>Replace the file in the <code>data/</code> folder with the downloaded one (same name).</li>
+            </ol>
+            <p class="info-note">Note: merging requires the site to be served over HTTP (e.g. <code>localhost:8000</code>), not opened as a local <code>file://</code>.</p>
+        </div>
+
+        <div class="tabs">
+            <button type="button" class="tab-btn active" id="tabQuizBtn" onclick="switchTab('quiz')">Quiz Builder</button>
+            <button type="button" class="tab-btn" id="tabTheoryBtn" onclick="switchTab('theory')">Theory Builder</button>
+            <button type="button" class="tab-btn" id="tabMdTheoryBtn" onclick="switchTab('mdtheory')">Markdown Theory</button>
+        </div>
+
+        <!-- QUIZ BUILDER -->
+        <div id="tabQuiz" class="tab-panel">
+            <form id="quizForm" onsubmit="event.preventDefault();">
+                <div class="form-panel">
+                    <div class="form-group">
+                        <label for="quizId">Quiz ID (unique, used in the URL) *</label>
+                        <input type="text" id="quizId" placeholder="e.g., python-functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Quiz Title *</label>
+                        <input type="text" id="title" placeholder="e.g., Python Functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" placeholder="e.g., Test your understanding of functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="quizCategory">Category</label>
+                        <input type="text" id="quizCategory" placeholder="e.g., Python">
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label" for="quizShuffle">
+                            <input type="checkbox" id="quizShuffle">
+                            <span>Shuffle questions &amp; options on each fresh attempt</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-panel">
+                    <div class="panel-header">
+                        <h3>Questions</h3>
+                        <button type="button" class="btn btn-sm btn-primary" onclick="addQuestion()">+ Add Question</button>
+                    </div>
+                    <div id="questionsContainer"></div>
+                </div>
+
+                <div class="form-panel">
+                    <div class="panel-header">
+                        <h3>Generated JSON</h3>
+                        <button type="button" class="btn btn-sm btn-secondary" onclick="clearEditing(); clearQuizForm()">Reset</button>
+                    </div>
+                    <textarea id="quizOutput" class="export-output" placeholder="Your JSON will appear here..."></textarea>
+                    <div class="export-actions">
+                        <button type="button" class="btn btn-primary" onclick="generateQuizJSON(true)">📥 Download JSON</button>
+                        <button type="button" class="btn btn-secondary" onclick="generateQuizJSON(false)">📋 Copy JSON</button>
+                        <button type="button" class="btn btn-secondary" onclick="mergeAndDownload('quiz')">🧩 Merge &amp; Download</button>
+                        <span class="export-status" id="quizStatus"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- THEORY BUILDER -->
+        <div id="tabTheory" class="tab-panel" style="display:none;">
+            <form id="theoryForm" onsubmit="event.preventDefault();">
+                <div class="form-panel">
+                    <div class="form-group">
+                        <label for="topicId">Topic ID (unique, used in the URL) *</label>
+                        <input type="text" id="topicId" placeholder="e.g., python-functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="topicTitle">Topic Title *</label>
+                        <input type="text" id="topicTitle" placeholder="e.g., Python Functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="topicCategory">Category</label>
+                        <input type="text" id="topicCategory" placeholder="e.g., Functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="topicDescription">Description</label>
+                        <input type="text" id="topicDescription" placeholder="e.g., Learn how to write reusable functions">
+                    </div>
+                </div>
+
+                <div class="form-panel">
+                    <div class="panel-header">
+                        <h3>Sections</h3>
+                        <button type="button" class="btn btn-sm btn-primary" onclick="addSection()">+ Add Section</button>
+                    </div>
+                    <div id="sectionsContainer"></div>
+                </div>
+
+                <div class="form-panel">
+                    <div class="panel-header">
+                        <h3>Generated JSON</h3>
+                        <button type="button" class="btn btn-sm btn-secondary" onclick="clearEditing(); clearTheoryForm()">Reset</button>
+                    </div>
+                    <textarea id="theoryOutput" class="export-output" placeholder="Your JSON will appear here..."></textarea>
+                    <div class="export-actions">
+                        <button type="button" class="btn btn-primary" onclick="generateTheoryJSON(true)">📥 Download JSON</button>
+                        <button type="button" class="btn btn-secondary" onclick="generateTheoryJSON(false)">📋 Copy JSON</button>
+                        <button type="button" class="btn btn-secondary" onclick="mergeAndDownload('theory')">🧩 Merge &amp; Download</button>
+                        <span class="export-status" id="theoryStatus"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- MARKDOWN THEORY BUILDER -->
+        <div id="tabMdTheory" class="tab-panel" style="display:none;">
+            <form id="mdTheoryForm" onsubmit="event.preventDefault();">
+                <div class="form-panel">
+                    <div class="form-group">
+                        <label for="topicMdId">Topic ID (unique, used in the URL) *</label>
+                        <input type="text" id="topicMdId" placeholder="e.g., python-functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="topicMdTitle">Topic Title *</label>
+                        <input type="text" id="topicMdTitle" placeholder="e.g., Python Functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="topicMdCategory">Category</label>
+                        <input type="text" id="topicMdCategory" placeholder="e.g., Functions">
+                    </div>
+                    <div class="form-group">
+                        <label for="topicMdDescription">Description</label>
+                        <input type="text" id="topicMdDescription" placeholder="e.g., Learn how to write reusable functions">
+                    </div>
+                </div>
+
+                <div class="form-panel">
+                    <div class="panel-header">
+                        <h3>Markdown Source</h3>
+                        <button type="button" class="btn btn-sm btn-secondary" onclick="clearMarkdownForm()">Reset</button>
+                    </div>
+                    <textarea id="topicMdMarkdown" rows="16" spellcheck="false" class="code-textarea" oninput="refreshMarkdownPreview()" placeholder="# Defining Functions&#10;&#10;A function groups code under a name. Use &lt;code&gt; tags? No — write **bold**, *italic*, and $...$ math here.&#10;&#10;- first idea&#10;- second idea&#10;&#10;```python&#10;def greet(name):&#10;    print('Hello', name)&#10;```&#10;&#10;$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$"></textarea>
+                    <p class="info-note">Supported: <strong># headings</strong>, paragraphs (**bold**, *italic*, $...$ math), <strong>- lists</strong>, <strong>1. ordered lists</strong>, <strong>``` fenced code```</strong>, <strong>$$...$$ formulas</strong>, <strong>![alt](image.png) images</strong>, <strong>@animation:id</strong> (e.g. <code>@animation:recursion</code>). Inline <code>`code`</code> is shown as plain text.</p>
+                </div>
+
+                <div class="form-panel">
+                    <div class="panel-header">
+                        <h3>Live Preview</h3>
+                    </div>
+                    <div id="mdPreview" class="theory-body"><p class="empty-state">The rendered topic will appear here as you type.</p></div>
+                </div>
+
+                <div class="form-panel">
+                    <div class="panel-header">
+                        <h3>Generated JSON</h3>
+                        <button type="button" class="btn btn-sm btn-secondary" onclick="clearMarkdownForm()">Reset</button>
+                    </div>
+                    <textarea id="mdTheoryOutput" class="export-output" placeholder="Your JSON will appear here..."></textarea>
+                    <div class="export-actions">
+                        <button type="button" class="btn btn-primary" onclick="generateMarkdownJSON(true)">📥 Download JSON</button>
+                        <button type="button" class="btn btn-secondary" onclick="generateMarkdownJSON(false)">📋 Copy JSON</button>
+                        <button type="button" class="btn btn-secondary" onclick="mergeMarkdownDownload()">🧩 Merge &amp; Download theory-md.json</button>
+                        <span class="export-status" id="mdTheoryStatus"></span>
+                    </div>
+                    <p class="info-note">Markdown topics are saved to their own file (<code>data/theory-md.json</code>), so they never overwrite topics made with the Theory Builder above. To keep the two sets collision-free, an ID that already exists in <code>data/theory.json</code> or <code>data/theory-md.json</code> is rejected.</p>
+                </div>
+            </form>
+        </div>
+
+        <!-- MANAGE & DELETE -->
+        <div class="manage-section">
+            <div class="form-panel">
+                <div class="panel-header">
+                    <h3>🗑️ Manage &amp; Delete</h3>
+                    <button type="button" class="btn btn-sm btn-secondary" onclick="loadManageList()">↻ Refresh</button>
+                </div>
+                <p class="info-note">Remove an existing quiz or theory topic from the data files. Each deletion updates a preview below — when you're done, click the matching <strong>Download</strong> button to get the new file and replace it in the <code>data/</code> folder. A quiz and theory topic with the same ID are linked — delete them separately if you want both gone.</p>
+                <div id="manageArea" class="manage-area">
+                    <p class="loading">Loading existing content...</p>
+                </div>
+
+                <div class="manage-output-panel">
+                    <div class="panel-header">
+                        <h3>Updated JSON after deletions</h3>
+                        <div class="export-actions">
+                            <button type="button" class="btn btn-primary" onclick="downloadManageFile('quiz')">📥 Download quizzes.json</button>
+                            <button type="button" class="btn btn-primary" onclick="downloadManageFile('theory')">📥 Download theory.json</button>
+                            <button type="button" class="btn btn-sm btn-secondary" onclick="resetManageOutput()">Reset</button>
+                            <span class="export-status" id="manageStatus"></span>
+                        </div>
+                    </div>
+                    <div class="manage-files">
+                        <div class="manage-file">
+                            <h4>quizzes.json</h4>
+                            <textarea id="manageQuizOutput" class="export-output" placeholder="Deleted quizzes will appear here..."></textarea>
+                        </div>
+                        <div class="manage-file">
+                            <h4>theory.json</h4>
+                            <textarea id="manageTheoryOutput" class="export-output" placeholder="Deleted theory topics will appear here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/theme.js?v=2"></script>
+    <script src="js/highlight.js?v=2"></script>
+    <script src="js/markdown.js?v=2"></script>
+    <script src="js/animation.js?v=2"></script>
+    <script src="js/admin.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{
+  "id": "recursion",
+  "title": "So funktioniert Rekursion",
+  "subtitle": "Visualisierung von fact(4) in Python",
+  "code": "def fact(n):\n    if n <= 1:            # Basisfall\n        return 1\n    return n * fact(n - 1)\n\nprint(fact(4))",
+  "steps": [
+    {
+      "label": "Aufruf von fact(4)",
+      "line": 1,
+      "calls": ["fact(4)"],
+      "text": "Wir rufen **fact(4)** auf. Die Ausführung beginnt oben in der Funktion. Für diesen Aufruf wird ein neuer **Rahmen** auf den Call-Stack gelegt."
+    },
+    {
+      "label": "Basisfall prüfen",
+      "line": 2,
+      "calls": ["fact(4)"],
+      "text": "Ist **4 ≤ 1**? Nein — der Basisfall wird übersprungen, die Rekursion geht weiter."
+    },
+    {
+      "label": "Der rekursive Aufruf",
+      "line": 4,
+      "calls": ["fact(4)", "fact(3)"],
+      "text": "Um **4 × fact(3)** zu berechnen, ruft sich die Funktion selbst auf: **fact(3)** wird oben auf den Stack gelegt, während **fact(4)** wartet."
+    },
+    {
+      "label": "Basisfall prüfen",
+      "line": 2,
+      "calls": ["fact(4)", "fact(3)"],
+      "text": "Ist **3 ≤ 1**? Nein — auch hier wird der Basisfall übersprungen."
+    },
+    {
+      "label": "Der rekursive Aufruf",
+      "line": 4,
+      "calls": ["fact(4)", "fact(3)", "fact(2)"],
+      "text": "**fact(3)** braucht **fact(2)**, also wird ein weiterer Rahmen auf den Stack gelegt."
+    },
+    {
+      "label": "Basisfall prüfen",
+      "line": 2,
+      "calls": ["fact(4)", "fact(3)", "fact(2)"],
+      "text": "Ist **2 ≤ 1**? Nein — wieder wird der Basisfall übersprungen."
+    },
+    {
+      "label": "Der rekursive Aufruf",
+      "line": 4,
+      "calls": ["fact(4)", "fact(3)", "fact(2)", "fact(1)"],
+      "text": "**fact(2)** braucht **fact(1)** — noch ein Rahmen kommt dazu. Der Stack ist jetzt **4 tief**."
+    },
+    {
+      "label": "Basisfall erreicht!",
+      "line": 2,
+      "calls": ["fact(4)", "fact(3)", "fact(2)", "fact(1)"],
+      "text": "Ist **1 ≤ 1**? **Ja!** Diesmal greift der Basisfall — es wird nicht weiter rekursiv aufgerufen."
+    },
+    {
+      "label": "return 1",
+      "line": 3,
+      "calls": ["fact(4)", "fact(3)", "fact(2) ← 1"],
+      "text": "**fact(1)** erreicht `return 1`, verlässt den Stack und gibt seinen Wert **1** an **fact(2)** zurück."
+    },
+    {
+      "label": "Rückwärts zurückrechnen",
+      "line": 4,
+      "calls": ["fact(4)", "fact(3) ← 2"],
+      "text": "**fact(2)** rechnet jetzt fertig: **2 × fact(1) = 2 × 1 = 2**. Das Ergebnis **2** geht zurück an **fact(3)**."
+    },
+    {
+      "label": "Rückwärts zurückrechnen",
+      "line": 4,
+      "calls": ["fact(4) ← 6"],
+      "text": "**fact(3)** rechnet fertig: **3 × fact(2) = 3 × 2 = 6**. Das Ergebnis **6** geht zurück an **fact(4)**."
+    },
+    {
+      "label": "Die Antwort!",
+      "line": 6,
+      "calls": [],
+      "text": "**fact(4)** rechnet fertig: **4 × fact(3) = 4 × 6 = 24**. Der Stack ist leer und `print` gibt **24** aus."
+    }
+  ]
+}

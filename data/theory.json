@@ -1,0 +1,569 @@
+{
+  "topics": [
+    {
+      "id": "Einleitung",
+      "title": "Einleitung",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Disclaimer"
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Seite soll ein ergänzendes Tool sein zur Vorlesung \"Informatik I\" von Professor Hünneberg sein. Es ist KEIN Ersatz zur Vorlesung und den Übungen und es wird dringend empfohlen, die Vorlesung zu besuchen und Übungen zu absolvieren. Es besteht keine Garantie auf Vollständigkeit und Korrektheit. \n\nFür Fehlermeldungen und Fragen: laurin.hefti@student.ethz.ch"
+        }
+      ],
+      "category": "generell"
+    },
+    {
+      "id": "Python_Einleitung",
+      "title": "Python Einführung",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Was ist eine Programmiersprache?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Programmiersprache ist ein Regelwerk mit Anweisungen welche der Mensch verstehen kann. Ein *Compiler* oder *Interpreter* wandelt die Anweisungen welche aus Buchstaben bestehen, in einen Binären Code mit 0 und 1 um. Das ist nun die Sprache welche ein Computer verstehen kann. Dieser Code kann nun ein Computer ausführen.\n\nWenn man nun eine Programmiersprache beherrscht, kann man im Grunde alles selber machen, was ein Computer kann, Computerspiele, Datenauswertung, Apps auf dem Handy usw. \n\nEs gibt viele verschiedene Programmiersprachen z.B. C++, C, Java, Rust, Python ... Jede Programmiersprache hat ihre Vor- und Nachteile.\nPython ist eine sehr einsteigerfreundliche Programmiersprache, mit welcher man komplexe Programme schon mit wenigen Zeilen Code verwirklichen kann. Sie ist extrem vielseitig von KI-Modellen erstellen und trainieren über Datenverarbeitung ist alles möglich. Nachteile der Programmiersprache sind zum Beispiel, dass sie sehr langsam ist im Vergleich zu C oder C++ und dass sie sehr viel Arbeitsspeicher benötigt.\n\nKurz noch einige Worte, warum Sie überhaupt Programmieren lernen und sich mit der Informatik beschäftigen sollten:\nIn der heutigen Zeit kann die KI sehr viele einfache Aufgaben übernehmen, so auch das Erstellen von einfachen Programmen. Auch diese Webseite wurde mit KI erstellt. Aus eigener Erfahrung kann ich aber sagen, dass nur der Anfang sehr reibungslos und gut funktioniert. Wird eine Aufgabe allerdings komplexer und anspruchsvoller, so nimmt die Leistung der KI drastisch ab, je nach Modell, das Sie verwenden. Es kann gut sein, dass Sie im Laufe dieses Studiums nie solche grossen Projekte selber coden müssen und die KI alles machen lassen können. In diesem Fall lege ich Ihnen ans Herz, sich trotzdem ein wenig mit dem Thema Informatik auseinanderzusetzen, da es einfach die Zukunft sein wird und wenn die KI später Ihnen mal nicht helfen kann aus diversen Gründen, stehen Sie sich einfach selber im Weg, weil Sie es nie versucht haben."
+        },
+        {
+          "type": "heading",
+          "text": "Wie verwende ich Python?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Es gibt verschiedene Möglichkeiten Python zu verwenden. Die einfachste ist über diese Webseite, wenn Sie auf die Schlange klicken, öffnet sich ein Fenster. Im linken können Sie den Code eingeben und rechts werden Sie die Ausgabe sehen. Eine andere Möglichkeit ist über eine Webseite, wenn Sie \"Python online\" googlen, finden Sie Webseiten, welche ebenfalls eine Funktion bereitstellen, um Python online auszuführen.\nEine andere Möglichkeit ist, wenn Sie sich den Python-Interpreter selber auf Ihrem Gerät downloaden. Der Unterschied ist dann, dass Sie Python unabhängig davon, ob Sie Internet haben oder nicht, laufen lassen können.  Ein weiterer Vorteil ist, dass Sie dann einfach Dateien auf Ihrem Laptop laden und bearbeiten können. Das ist dann wichtig, wenn Sie Daten verarbeiten wollen. \n\nWeiteres in der Übungsstunde."
+        },
+        {
+          "type": "heading",
+          "text": "Das erste kleine Programm"
+        },
+        {
+          "type": "code",
+          "code": "print(\"hello world\")"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tippen Sie folgendes Programm in die Programmierumgebung ab und lassen Sie das Programm laufen."
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Python Syntax",
+      "title": "Python Syntax",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Syntax"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jede Programmiersprache hat einen **Syntax**, welcher vorgibt, wie die Programmiersprache aufgebaut ist. Es ist vergleichbar mit der Satzstruktur in Sprachen, wo ein Nomen oder Verb meistens eine fest bestimmte Position hat. So hat auch eine Programmiersprache eine feste Struktur, von welcher nicht abgewichen werden darf. Ansonsten versteht der Computer nicht, was man will und er kann die Aufgabe nicht ausführen. \n\nDabei kann es vorkommen, dass ein vergessener Punkt oder Komma die Bedeutung und Funktion eines Programmes drastisch verändern kann, was zur Folge hat, dass man sehr viel Zeit benötigt, um diesen Fehler zu finden. Dabei kann AI meistens gut helfen und erspart einem das mühsame Suchen.\n\nGenaueres über den Syntax wird später erläutert."
+        },
+        {
+          "type": "heading",
+          "text": "Kommentare"
+        },
+        {
+          "type": "paragraph",
+          "text": "Es ist immer hilfreich, Kommentare innerhalb eines Codes zu machen, damit man sich später daran erinnern kann, was man sich dabei gedacht hat oder wenn eine andere Person sich den Code anschauen möchte, kann er diesen schneller nachvollziehen und muss nicht jede einzelne Linie lesen, um zu verstehen, was das Programm macht.\n\nKommentare können mit dem # oder mit \"\"\" gemacht werden. Dabei berücksichtigt der Computer später diese Kommentare nicht und löst keinen Fehler im Programm aus."
+        },
+        {
+          "type": "code",
+          "code": "# Das ist ein Kommentar\n\nprint(\"hallo\") # Das ist auch ein Kommentar, aber das hallo siehst du trotzdem\n\n#print(\"hallo\") Jetzt ist alles ein Kommentar, deshalb siehst du kein zweites Mal ein Hallo\n\n\"\"\"\nDas ist auch ein Kommentar welcher über mehrere Linien gehen kann.\nIn der Fachsprache nennt man das eine Docstring.\n\"\"\""
+        }
+      ],
+      "category": "Python",
+      "description": "Syntax und Kommentare"
+    },
+    {
+      "id": "Variabeln",
+      "title": "Variablen",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Was ist eine Variable?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Variable ist ein Speicher welcher irgendetwas in einem Programm speichert. Das kann eine Zahl, Kommazahl, Buchstabe, Zeichenkette, Liste, Klasse oder sonst etwas sein.\nMit diesen Variablen kann man später rechnen, man kann sie auch verändern oder löschen.\nZuerst braucht die Variable einen Namen. Die Variable kann irgendeinen Namen haben, aber es gibt gewisse Einschränkungen. Sie darf NICHT einen bereits verwendeten Namen haben welcher von Python bereits verwendet wird. Liste sehen Sie unten. Sie darf auch keine Leerzeichen beinhalten, da es sonst als zwei Variablen angesehen wird. Auch sind Sonderzeichen wie: %, $ oder ? verboten. Zudem wird zwischen Gross- und Kleinschreibung unterschieden.\n\nVerwendete Wörter von Python:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "for",
+            "if",
+            "else",
+            "class",
+            "def",
+            "while",
+            "..."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Wie erstelle und verwende ich Variablen?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Variablen werden mit dem = Zeichen erstellt und überschrieben."
+        },
+        {
+          "type": "code",
+          "code": "x = 5 # Hier wird der Variable, welche den Namen x hat, den Wert 5 gegeben. Dabei ist 5 eine Zahl.\n\ny = 5 # Die Variable darf auch anders heissen.\n\nx = 6 # Jetzt hat die Variable x den Wert 6 gespeichert, weil sie überschrieben wurde.\n\n\"\"\" Es ist auch erlaubt, einer Variable den Wert einer anderen Variable zuzuordnen. \"\"\"\n\nx = y # Jetzt hat die Variable x den Wert der Variable y. Variable y hat den Wert 5, somit hat jetzt die Variable x auch den Wert 5 wieder."
+        },
+        {
+          "type": "heading",
+          "text": "Wie verwendet man die Variablen?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit den Variablen kann man vieles machen, das hängt von der Art des gespeicherten Wertes ab. So kann man zwei Zahlen multiplizieren, allerdings kann man nicht zwei Buchstaben multiplizieren. Weiteres dazu in den kommenden Lektionen."
+        },
+        {
+          "type": "code",
+          "code": "x = 5\nprint(x) # man kann Variablen printen"
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Datentypen",
+      "title": "Datentypen",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Allgemein"
+        },
+        {
+          "type": "paragraph",
+          "text": "In Python kann jede Variable jeden Datentyp annehmen und man kann sie dynamisch zwischen ihnen wechseln. Das ist nicht selbstverständlich. In C++ zum Beispiel muss man bei jeder Variable angeben, welchen Datentyp die Variable annehmen soll.\n\nMan kann in Python den Typ der Variable mit folgendem Befehl herausfinden."
+        },
+        {
+          "type": "code",
+          "code": "x = 10.0\n\nprint(type(x)) # Ausgabe: <class 'float'>"
+        },
+        {
+          "type": "heading",
+          "text": "Integer"
+        },
+        {
+          "type": "paragraph",
+          "text": "Integer sind Ganzzahlen. Besonders ist, dass es keinen Overflow geben kann. Ein Overflow ist, wenn die Zahl grösser wird als die grösstmögliche Zahl, welche mit der vorhandenen Anzahl an Bits dargestellt werden kann. Man kann mit Integers verschiedene mathematische Operationen durchführen."
+        },
+        {
+          "type": "code",
+          "code": "x = 10\ny = 20\n\na = 10e5 # Exponentialschreibweise ist auch möglich\n\nprint(x + y) # Ausgabe : 30\n\nz = x + y # Man kann auch die Zahlen addieren und dann in einer neuen Variable speichern\nprint(z) # Ausgabe : 30\n\nprint(x - y) # Ausgabe : -10\nprint(x * y) # Ausgabe : 200\nprint(y / x) # Ausgabe : 2.0 Achtung, das Resultat ist nun vom Typ float"
+        },
+        {
+          "type": "heading",
+          "text": "Float"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein float ist eine Kommazahl."
+        },
+        {
+          "type": "code",
+          "code": "x = 10.0 # Damit der Typ von Anfang an ein float ist, muss ein Punkt verwendet werden.\n\n\"\"\"\nEs gelten die selben Operationen wie beim Integer.\n\"\"\""
+        },
+        {
+          "type": "heading",
+          "text": "String"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein String ist eine Zeichenkette. Sie beginnt entweder mit \" oder mit einem '. Bei Strings gibt es einige vordefinierte Funktionen.\n\nUnten sind einige wichtige aufgelistet, es gibt noch eine Vielzahl an weiteren Funktionen unter folgendem Link.\nhttps://www.w3schools.com/python/python_strings_methods.asp"
+        },
+        {
+          "type": "code",
+          "code": "x = \"hallo\" # Das ist ein String\ny = 'hallo' # Das ist auch ein String\n\nz = \"\"\"So kann man auch Strings\nmit mehr Zeilen definieren.  Alternativ kann kann man auch \\n Verwenden um einen neue Zeile zu beginnen.\"\"\"\nprint(z)\n\n# Man kann Strings zusammenführen\n\na = x + \" \" + y\nprint(a)\n\n# Es gibt diverse vordefinierte Funktionen für Strings\n\nprint(a.upper()) # Gibt den String in Grossbuchstaben zurück\nprint(a.lower()) # Gibt den String in Kleinbuchstaben zurück\nprint(a.strip()) # Entfernt Leerzeichen am Anfang und Ende aus dem String\nprint(a.replace(\"h\",\"J\")) # Tauscht \"h\" mit \"J\" aus\nprint(a.split(\" \")) # Schneidet den String bei dem angegebenen String. Achtung: Es wird eine Liste zurückgegeben.\n\nprint(len(a)) # Gibt die Länge (Anzahl an Buchstaben) des Strings zurück"
+        },
+        {
+          "type": "heading",
+          "text": "Format Strings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Format Strings sind auch Strings, allerdings kann man beim Erstellen zusätzliche Modifikationen vornehmen. Format Strings beginnen vor dem \" mit einem f."
+        },
+        {
+          "type": "code",
+          "code": "age = 20\nx = f\"Er ist {age} Jahre alt\" # Somit kann man Zahlen direkt in einen String einfügen. Es müssen dabei die {}-Klammern verwendet werden.\nprint(x)\n\nprice = 10.1111111\nx = f\"Der Preis ist {price:.4}\" # Mit folgendem Syntax kann man Zahlen in einem String direkt runden\nprint(x)"
+        },
+        {
+          "type": "heading",
+          "text": "String Slicing"
+        },
+        {
+          "type": "paragraph",
+          "text": "Man kann Strings auch zuschneiden oder nur bestimmte Bereiche vom String auslesen. Dies kann man über Indexieren machen. Der **Index** ist eine Nummer, welche die Position eines Buchstabens in der Zeichenkette angibt. Dabei beginnt man mit 0 für den ersten Buchstaben und zählt dann weiter hoch. Man kann nun einen Teil des Strings mit [] auslesen. Mit dem : kann man einen Bereich angeben, welchen man auslesen möchte."
+        },
+        {
+          "type": "code",
+          "code": "a = \"abcdefg\"\nprint(a[0]) # Ausgabe : a\nprint(a[3]) # Ausgabe : d\n\nprint(a[0:3]) # Ausgabe : abc\nprint(a[:3]) # Ausgabe : abc, Es printet alles vom Anfang bis zum angegebenen Index ohne den angegebenen Index aus\nprint(a[1:]) # Ausgabe : bcdefg, printet alles bis zum Ende von und mit 1 aus"
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Datentypen 2",
+      "title": "Datentypen 2",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Booleans"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Boolean ist entweder True oder False, also Richtig oder Falsch, etwas anderes kann er nicht sein."
+        },
+        {
+          "type": "code",
+          "code": "x = True\ny = False"
+        },
+        {
+          "type": "heading",
+          "text": "NoneType"
+        },
+        {
+          "type": "paragraph",
+          "text": "Der NoneType ist ein Standardwert bei Python und wird verwendet, um zum Beispiel eine uninitialisierte Variable zu kennzeichnen."
+        },
+        {
+          "type": "code",
+          "code": "x = None"
+        },
+        {
+          "type": "heading",
+          "text": "Lists"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wie der Name schon sagt, sind das Listen. In Python sind diese ganz nett zu bedienen, sie haben eine unendliche Länge, solange der Speicherplatz ausreicht, und es können unterschiedliche Datentypen in derselben Liste gespeichert werden. So kann eine Zahl und ein Buchstabe in der gleichen Liste gespeichert werden, was nicht selbstverständlich ist.\n\nEine Liste wird mit den [] Klammern erstellt und kann indexiert werden wie Strings."
+        },
+        {
+          "type": "code",
+          "code": "x = [\"Apfel\", \"Orange\", \"Banane\"] # Liste aus Strings\ny = [1,3,5] # Liste aus Integern\n\nz = [\"Auto\" , 5] # Liste aus verschiedenen Datentypen\n\nprint(x)\nprint(x[0]) # Ausgabe : \"Apfel\" , es wird auf die Gleiche weise Indexiert wie bei einem String.\n\nl = [[1,2],[\"Auto\", \"Haus\"]] # Es ist möglich auch Listen in Listen zu haben\nprint(l[0][1]) # Ausgabe : 2, Wenn es mehrere Listen in einer Liste sind muss man zwei [] Klammern verwenden, die erste Klammer bestimmt, ob es die Listen mit den Zahlen oder den Wörtern ist und die zweite bestimmt welches Objekt in der inneren Liste es ist.\n\ny = [1,2,3,4,5,6,7,8,9]\nprint(y[1:4]) # Ausgabe : [2,3,4]\n\nprint(y[-1]) # Ausgabe : 9, auch negative Indizes sind möglich, dann geht man von rechts nach links"
+        },
+        {
+          "type": "heading",
+          "text": "Listen bearbeiten"
+        },
+        {
+          "type": "code",
+          "code": "x = [1,2,3,4,5,6,7]\nx[2] = 1 # Man kann einzelne Einträge in der Liste verändern mit folgendem Syntax. Das x[2] besagt, dass man gerne das dritte Element haben möchte, um es benutzen zu können.\nprint(x) # Ausgabe : [1,2,1,3,4,5,6,7]"
+        },
+        {
+          "type": "code",
+          "code": "x = [1,2,3,4,5,6]\n\nx.append(7) # Fügt der Liste ein Element am Ende hinzu.\nprint(x) # Ausgabe : [1,2,3,4,5,6,7]\n\nx.insert(1,7) # Fügt der Liste ein Element am gegebenen Index (erster Parameter) hinzu. In diesem Fall ist der Index 1.\nprint(x) # Ausgabe [1,7,2,3,4,5,6,7]\n\nx.remove(7) # Entfernt das gegebene Element aus der Liste nur einmal von links nach rechts.\nprint(x) # Ausgabe : [1,2,3,4,5,6,7]\n\nx.pop(1) # Entfernt das Element am gegebenen Index, alle anderen Elemente rutschen nach.\nprint(x) # Ausgabe : [1,3,4,5,6,7]\n\n# Mit dem \"del\" Befehl kann man auch einzelne Einträge löschen oder gleich die gesamte Liste\n\ndel x[1] # Löscht das zweite Element\ndel x # Die gesamte Liste ist gelöscht"
+        },
+        {
+          "type": "code",
+          "code": "x = [1,3,2,8,5,6]\n\nx.sort() # Sortiert die Liste\nprint(x) # Ausgabe : [1,2,3,5,6,8]\n\nx.sort(reverse = True) # Sortiert die Liste in umgedrehter Reihenfolge\nprint(x) # Ausgabe : [8,6,5,3,2,1]"
+        },
+        {
+          "type": "code",
+          "code": "\"\"\"\nEine Liste zu kopieren ist nicht ganz so einfach wie bei einfachen Zahlen, wieso das so ist, wird in einer späteren Lektion behandelt.\n\"\"\"\n\nx = [1,2,3]\ny = x # Das funktioniert nicht ganz, y ist jetzt das gleiche Objekt im Speicher wie x und somit nicht kopiert. Wenn man nun etwas in y verändert, verändert das auch x.\n\n\n# Diese Möglichkeiten gibt es, eine Liste zu kopieren.\ny = x.copy() \ny = x[:]\ny = list(x)\n\n# Es ist möglich auf eine einfache Art zwei Listen zu verbinden:\nz = x + y\nprint(z) # Ausgabe : [1,2,3,1,2,3]"
+        },
+        {
+          "type": "heading",
+          "text": "Datentypen konvertieren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Manchmal muss man Datentypen konvertieren, das heißt, einen Datentyp in einen anderen umzuwandeln. Zum Beispiel kann man eine Zahl in einen Buchstaben umwandeln oder eine Ganzzahl in eine Kommazahl umwandeln."
+        },
+        {
+          "type": "code",
+          "code": "x = 10\n\nprint(type(x)) # Ausgabe : <class 'int'>\n\ny = float(x)\nprint(type(y)) # Ausgabe : <class 'float'>\n\nz = str(x)\nprint(type(z)) # Ausgabe : <class 'str'>\n\ns = \"hallo ich bin \" + z + \"Jahre alt\" # Weil z ein String ist kann man ihn mit dem + Symbol zusammenfügen mit anderen Strings, als Integer wäre das nicht möglich gewesen.\n\nprint(s)"
+        }
+      ],
+      "category": "Python",
+      "description": "Booleans, Lists, others"
+    },
+    {
+      "id": "Eingaben",
+      "title": "Eingaben",
+      "category": "Python",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Eingaben mit der input() Funktion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Programme werden erst richtig nützlich, wenn der Benutzer etwas eingeben kann. Dafür gibt es in Python die **input()** Funktion. Sie wartet, bis der Benutzer etwas eintippt und mit Enter bestätigt, und gibt dann das Eingegebene als **String** zurück.\n\nZwischen den Klammern wird ein Text (der sogenannte Prompt) angegeben, welcher vor der Eingabe ausgegeben wird und den Benutzer auffordert, etwas einzugeben."
+        },
+        {
+          "type": "code",
+          "code": "name = input(\"Wie heisst du? \")\nprint(\"Hallo\", name, \"!\")\n\nalter = input(\"Wie alt bist du? \")\nprint(\"Du bist\", alter, \"Jahre alt.\")"
+        },
+        {
+          "type": "heading",
+          "text": "input() liefert immer einen String"
+        },
+        {
+          "type": "paragraph",
+          "text": "Auch wenn der Benutzer eine Zahl eintippt, gibt **input()** immer einen **String** zurück. Um damit zu rechnen, muss der Wert zuerst mit **int()** oder **float()** in eine Zahl umgewandelt werden."
+        },
+        {
+          "type": "code",
+          "code": "alter = input(\"Wie alt bist du? \")  # alter ist ein String\nprint(alter + 5)                 # Fehler: String und Zahl lassen sich nicht addieren\n\nalter = int(input(\"Wie alt bist du? \"))  # jetzt ist alter ein Integer\nprint(alter + 5)                 # funktioniert"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gibt die Eingabe keine gültige Zahl ein (z.B. Buchstaben), führt **int()** zu einem Fehler (ValueError). Wie man damit umgeht, wird in der Lektion über Errors behandelt."
+        }
+      ]
+    },
+    {
+      "id": "Python Operatoren",
+      "title": "Operatoren",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Arithmetische Operatoren"
+        },
+        {
+          "type": "paragraph",
+          "text": "In diesem Kapitel soll es ein wenig um **Operatoren** gehen. Operatoren machen irgendetwas, sie kennen bereits den + - * / Operator was zu den Arithmetischen Operatorn gehört."
+        },
+        {
+          "type": "code",
+          "code": "x = 5\n# Wenn Sie nun diese Zahl erhöhen wollen, kennen Sie im Moment diese Schreibweise:\n\nx = x + 5\n# Das ist eine Möglichkeit, es gibt noch eine abgekürzte Schreibweise, welche dasselbe bewirkt.\n\nx += 5 # Addition und Zuweisung in einem Operator.\nprint(x) # Ausgabe : 15\n\n# Diese Schreibweise geht auch mit allen anderen Operatoren.\n# Weitere nützliche arithmetische Operatoren sind:\n\nx ** 3 # Potenz\nx // 3 # Ganzzahldivision\nx % 3 # Restdivision"
+        },
+        {
+          "type": "heading",
+          "text": "Vergleichende Operatoren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergleichende Operatoren sind wie in der Mathe Vergleiche. Diese Operatoren geben einen Boolean also True oder False zurück."
+        },
+        {
+          "type": "code",
+          "code": "x = 10\ny = 20\n\nprint(x == y) # Ausgabe : False | = =\nprint(x <= y) # Ausgabe : True  | < = \nprint(x >= y) # Ausgabe : False | > =\nprint(x < y) # Ausgabe : True   | <\nprint(x > y) # Ausgabe : False  | >\nprint(x != y) # Ausgabe : True   | ! ="
+        },
+        {
+          "type": "heading",
+          "text": "Logische Operatoren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Logische Operatoren sind Operatoren welche Booleans vergleicht und je nach Wert und Operator einen Boolean zurückgibt. Direkt eingebaut in die Programmierprache sind nur \"and\", \"or\" und \"not\"."
+        },
+        {
+          "type": "code",
+          "code": "print(True and True) # Ausgabe : True\nprint(not False) # Ausgabe : True\nprint(True or False) # Ausgabe : True\n\n\"\"\"\nZum Beispiel ist der XOR Operator nicht eingebaut, allerdings kann er mit einem ! = gemacht werden, welcher die gleiche Wahrheitstabelle aufweist wie ein XOR. Andere logische Operatoren müssen selber zusammengebaut werden.\n\"\"\"\n\nprint(True != True) # Ausgabe : False , Äquivalent zu XOR\n\nprint(not (True and True)) # Äquivalent zum NAND Operator\n\n\"\"\"\nEine Alternative bilden die Binären Operatoren, welche verwendet werden um mit Binärzahlen zu rechnen, diese werden hier aber nicht behandelt.\n\"\"\""
+        },
+        {
+          "type": "heading",
+          "text": "Weitere Operatoren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Es gibt noch die Identitätsoperatoren und Zugehörigkeitsoperatoren.\n\nKurze Anmerkung: Die Namen der Operatoren sind zweitrangig, wichtig ist es, diese zu verwenden."
+        },
+        {
+          "type": "code",
+          "code": "# Identitätsoperatoren sind \"is\" und \"is not\". Damit kann man überprüfen, ob ein Objekt dasselbe ist wie das andere.\n\nx = 5\ny = x\nprint(x is y) # Ausgabe : True, da beide den gleichen Wert haben\n\nx = [1,2,3]\ny = [1,2,3]\n\nprint(x is y) # Ausgabe : False, da es zwei separate Listen sind\n\ny = x\nprint(x is y) # Ausgabe : True, da jetzt y dasselbe ist wie x, darum muss man Listen anders kopieren. Siehe Kapitel Datentypen 2.\n\n# Zugehörigkeitsoperatoren sind \"in\" und \"not in\". Mit diesen lässt sich super einfach überprüfen, ob etwas zu einer Liste gehört oder nicht.\n\nx = [1,2,3]\nprint(2 in x) # Ausgabe : True\nprint(5 in x) # Ausgabe : False"
+        },
+        {
+          "type": "heading",
+          "text": "Prioritäten der Operatoren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Operatoren haben wie in der Mathematik auch Prioritäten. Dort hat eine Multiplikation Vorrang in der Rechnung als eine Addition, wenn nichts Genaueres mit Klammern bestimmt wurde. So interpretiert es auch Python. \n\nHöchste Priorität (von oben nach unten):"
+        },
+        {
+          "type": "list",
+          "items": [
+            "()",
+            "**",
+            "* / // %",
+            "+ -",
+            "is not in == != < >",
+            "not",
+            "and",
+            "or"
+          ]
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Conditions",
+      "title": "Conditions",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Conditions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Damit ein Programm unterschiedlich auf verschiedene Eingaben reagieren kann, braucht es Conditions oder auf Deutsch Bedingungen. Neu dazu kommt der Definitionsbereich, welcher auch an dieser Stelle erläutert wird. Bis jetzt lief das Programm immer von oben nach unten ohne Unterbruch und Sprünge, das ändert sich jetzt. Wenn man jetzt einen Codeblock an eine Condition knüpft, welcher nicht ausgeführt wird, wenn die Bedingung nicht erfüllt ist, dann springt das Programm von einer Zeile auf eine andere und überspringt den nicht auszuführenden Code. Man muss nun kennzeichnen bis wohin dieser bedingte Codeblock geht.\nDies geschieht über das Einrücken des Codes, das heißt, der Code, welcher zur Bedingung gehört, muss weiter rechts sein als der Rest."
+        },
+        {
+          "type": "code",
+          "code": "x = 10\ny = 20\n\nif x > y:    # Das if erzeugt eine Verzweigung, danach kommt die Bedingung\n    print(\"x ist grösser\") # Dieser Code gehört zur Bedingung, weil er weiter rechts ist\n\nprint(x) # Dieser Code gehört nicht mehr zur Bedingung dazu, da er wieder auf der ursprünglichen Höhe ist.\n\nif (True):    \n    print(x)    # Dieses Print wird immer ausgeführt, da die Bedingung im if-Statement immer True ist, man darf auch Klammern um die Bedingung setzen."
+        },
+        {
+          "type": "code",
+          "code": "x = 10\ny = 20\n\nif x > y:\n    print(\"x ist grösser\")\nelif x == y:\n    print(\"x ist gleich gross\")\nelse:\n    print(\"x ist kleiner\")\n\n\"\"\" \nDie elif-Bedingung wird NUR ausgeführt, wenn die Bedingung, welche sie hat, erfüllt ist und die vorhergehenden Bedingungen NICHT erfüllt wurden.\nWird diese Bedingung auch nicht erfüllt, wird als letztes die else-Bedingung ausgeführt. Sie ist sozusagen ein Backup oder Alternative, wenn alles andere nicht zutrifft. \nIn diesem Fall würde \"x ist kleiner\" ausgegeben. Auch zu erwähnen ist, dass man beliebig viele elif-Bedingungen haben kann, solange die erste Bedingung ein if ist. Sobald eine if oder elif-Bedingung erfüllt wurde, werden alle folgenden Bedingungen übersprungen.\n\"\"\""
+        },
+        {
+          "type": "code",
+          "code": "\"\"\"\nEs ist auch erlaubt, mehrere if-Statements ineinander zu verschachteln. Das sieht wie folgt aus:\n\"\"\"\n\nx = 20\n\nif x > 10:\n    print(\"x ist grösser als 10\")\n    if x > 20:\n        print(\"x ist grösser als 20\")\n    else:\n        print(\"x ist nicht grösser als 20\")\nelse:\n    print(\"x ist nicht grösser als 10)\n\n\"\"\"\nAusgabe :\n\"x ist grösser als 10\"\n\"x ist nicht grösser als 20\"\n\nErklärung :\nDas erste if ist erfüllt, dass x grösser als 10 ist, allerdings ist das zweite if nicht erfüllt, somit wird das else auf gleicher Höhe ausgeführt. Das else auf der tieferen Höhe wird nicht ausgeführt, dass die erste Bedingung auf der gleichen Höhe erfüllt wurde.\n\"\"\""
+        },
+        {
+          "type": "code",
+          "code": "# Manchmal ist es nützlich, einen Codeblock leer zu lassen, da man noch nicht so weit ist.\n\nif True:\n    pass # Das Keyword pass macht nichts."
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Schleifen",
+      "title": "Schleifen",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Schleifen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Es gibt zwei Arten von Schleifen, die for- und die while-Schleife."
+        },
+        {
+          "type": "code",
+          "code": "# Die for-Schleife eignet sich gut, um über einen Bereich zu iterieren.\n\nx = [\"a\", \"b\", \"c\"]\n\nfor i in x:\n    print(i)\n\n\"\"\"\nDie Syntax der Schleife ist immer zuerst das Keyword, dann ein Variablenname oder _ (falls keine Variable benötigt wird), dann \"in\" und dann über was iteriert werden soll. Das kann eine Liste sein oder ein Bereich, wie man noch sehen wird.\nDie Variable i erhält dann nach und nach ein Element aus der Liste, mit dem man etwas machen kann. Auch hier gilt wieder alles, was eingerückt ist, gehört zur Schleife und wird mehrmals wiederholt.\n\"\"\"\n\n# ----------------------------------------------------------------\n\nfor i in range(0,10,2):\n    print(i)\n\n\"\"\"\nAusgabe :\n0\n2\n4\n6\n8\n\nBegründung : \nDie Funktion \"range\" erzeugt einen Bereich, über welchen iteriert werden kann. Dabei ist der erste Eintrag der Startwert welcher immer inklusiv ist, der zweite Wert ist der Endwert welcher exklusiv ist und der dritte Eintrag ist, in welchen Schritten die Variable i sich vergrössert. Die ersten zwei Parameter sind optional und müssen nicht angegeben werden.\n\"\"\"\n\n# --------------------------------------------------------------------\n\nx = [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]\n\nfor i in x:\n    if i == \"c\":\n        break\n    print(i)\n\n\n# Das break-Keyword bricht Schleifen sofort ab und führt den Rest NICHT zu Ende. \n# Das bedeutet für dieses Beispiel, dass nur \"a\" und \"b\" ausgegeben werden.\n\nfor i in x:\n    if i == \"c\":\n        continue\n    print(i)\n\n# Das continue-Keyword beendet den jetzigen Schleifendurchgang und geht bis ans Ende der Schleife, aber bricht nicht die komplette Schleife ab.\n# Für dieses Beispiel würden dann a\", \"b\", \"d\", \"e\", \"f\" ausgegeben werden, aber nicht \"c\", da dies übersprungen wurde. \n\n\nfor i in x:\n    if i == \"z\":\n        break\n    print(i)\nelse:\n    print(\"all done\")\n\n# Das else am Ende wird ausgeführt, wenn die Schleife NICHT mit einem break gestoppt wurde, sondern wenn sie erfolgreich zu Ende laufen konnte."
+        },
+        {
+          "type": "code",
+          "code": "# Die while-Schleife eignet sich wenn man eine Schleife an eine Bedingung knüpfen möchte.\n\ni = 0\n\nwhile i < 5:\n    print(i)\n    i += 1\n\n\"\"\"\nDiese Schleife läuft so lange, bis der boolesche Ausdruck der Schleife nicht mehr True ist.\nAusgabe : \n0\n1\n2\n3\n4\nSobald i den Wert 5 erreicht hat, ist die Bedingung nicht mehr erfüllt, und die Schleife wird nicht mehr ausgeführt, aber der Durchgang wird noch zu Ende geführt.\n\"\"\"\n\n# Sowohl break als auch continue funktionieren gleich bei diesem Typ von Schleife.\n# Bemerkung : while True läuft unendlich lange."
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Python Funktionen",
+      "title": "Funktionen",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Funktionen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Einige Aufgaben verlangen, dass im Programm immer wieder dasselbe gemacht wird. Um unnötiges Wiederholen von Code zu vermeiden kann man Funktionen definieren."
+        },
+        {
+          "type": "code",
+          "code": "def my_function():\n    x = 1\n    y = 2\n    z = x + y\n    print(z)\n\nmy_function()\nmy_function()\n\n\n\"\"\"\nDie Definition einer Funktion beginnt mit dem def-Keyword gefolgt vom Namen der Funktion und zwei Klammern (), diese müssen dort stehen und dem Doppelpunkt um eine Einrückung zu starten.\nDer Körper der Funktion wird wie bei if-Statements oder Schleifen mittels Einrückung definiert.\nDie Funktion wird verwendet indem man den Namen mit der Klammer () aufruft.\n\nAusgabe : \n3\n3\n\nEine Funktion ist beliebig oft aufrufbar.\n\"\"\"\n\n# --------------------------------------------------------------------------\n\n\"\"\"\nAnmerkung\nprint(\"hallo\") ist auch eine Funktion welche bereits von Python vordefiniert ist. Der Funktion kann man einen **Parameter** übergeben, in diesem Beispiel wäre das \"hallo\".\n\nSo kann man eigene Parameter machen:\n\"\"\"\n\ndef add_function(x,y):\n    print(x+y)\n\nadd_function(5,4)\n\n# Die eigenen Parameter sind nun x und y, welche die Werte 5 und 4 annehmen.\n\n# ---------------------------------------------------------------------\n\n# Eine Funkion kann auch etwas zurückgeben.\n\ndef sub_function(x,y):\n    z = x - y\n    return z\n\nresultat = sub_function(5,4)\nprint(resultat)\n\nprint(sub_function(5,4))\n\n\"\"\"\nDabei gibt die Funktion den Wert zurück, welcher nach dem return-Keyword steht. Diesen Wert kann man dann in einer Variable speichern oder direkt verwenden. Man muss diesen zurückgegebenen Wert nicht unbedingt verwenden, man kann ihn auch sozusagen verfallen lassen.\n\"\"\""
+        },
+        {
+          "type": "heading",
+          "text": "Scope"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Variable ist nur in dem Bereich gültig, in dem sie auch erstellt wurde. Diesen Bereich nennt man Scope. Dabei ist vor allem zwischen Lokalen und Globalen Variablen zu unterscheiden. Eine globale Variable wurde im Hauptkörper des Programms erstellt, diese ist immer gültig, außer man löscht sie mit dem \"del\"-Befehl.  Lokale Variablen werden in einer Funktion oder Schleife erstellt und sind nur so lange gültig, bis der eingerückte Codeblock fertig ist."
+        },
+        {
+          "type": "code",
+          "code": "x = 5 # Das ist eine Globale Variable\n\ndef my_function():\n    y = 4 # Das ist eine Lokale Variable\n\n    print(y) # y kann man hier verwenden\n    print(x) # x kann man hier auch verwenden\n\n# print(y) # y kann man hier nicht mehr verwenden, da es ausserhalb der Funktionsdefinition (eingerückter Codeblock) ist.\n\n# ---------------------------------------------------------------\n\ndef my_function():\n    x = 3 # Diese Variable gibt es bereits im globalen Scope, Python sieht das als neue Variable\n\n    print(x) # Ausgabe : 3, Lokale Variablen haben eine höhere Priorität als eine Globale Variable\n\nprint(x) # Ausgabe: 5, da jetzt nur noch die globale Variable existiert, wird diese verwendet."
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Python Recursion",
+      "title": "Rekursion",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Rekursion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rekursion ist, wenn sich eine Funktion in sich selber aufruft. Der Vorteil von Rekursion ist, dass man gewisse Probleme sehr übersichtlich lösen kann, es kann aber auch schnell kompliziert werden und zum Korrigieren kann es sehr unübersichtlich werden.\n\nWenn man eine Funktion rekursiv machen möchte braucht es immer eine Abbruchbedingung, ansonsten würde die Funktion unendlich lange sich selber aufrufen.\n\nAls Beispiel wird die Fibonacci Folge verwendet:\n$$0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, \\dots$$"
+        },
+        {
+          "type": "code",
+          "code": "# Iterative Funktion\n\ndef fibonacci_iterativ(n):\n    if n <= 1:\n        return n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\nprint(fibonacci_iterativ(7))\n\n# -------------------------------------------------------------\n\n# Rekursive Funktion\n\ndef fibonacci_rekursiv(n):\n    if n <= 1:                # Abbruchbedingung\n        return n\n    return fibonacci_rekursiv(n - 1) + fibonacci_rekursiv(n - 2)\n\nprint(fibonacci_rekursiv(7))\n\n\"\"\"\nDie Funktion ruft zweimal sich selber aus, welche dann immer wieder sich selber aufrufen, einfach mit n-1 und n-2, bis schliesslich die Abbruchbedingung erfüllt ist, wenn n <= 1 ist. Dann wird die Funktion nicht mehr aufgerufen sondern es wird ein Wert zurück gegeben. Dann werden die beiden zurückgegebenen Werte zusammengerechnet und dann anschliessend auch zurückgegeben, und das passiert ebenfalls rekursiv.\n\"\"\""
+        },
+        {
+          "type": "paragraph",
+          "text": "Ab einer gewissen Rekursionstiefe gibt Python einen Fehler aus."
+        },
+        {
+          "type": "animation",
+          "animation": "recursion"
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Errors",
+      "title": "Errors",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Errors"
+        },
+        {
+          "type": "paragraph",
+          "text": "Errors sind Fehler welche vor oder während des Ausführens des Programmes auftauchen können. Anhand der Fehlermeldung kann man meistens schnell herausfinden wo und was der Fehler ist.\n\nSyntaxError\nEin SyntaxError ist, wenn Sie etwas falsch beschrieben haben im Code, also ein Grammatik- oder Strukturfehler. Hier sehen Sie den Error von folgendem Programm, welches in diesem interaktiven Editor ausgelöst wurde:\n\nx ="
+        },
+        {
+          "type": "code",
+          "code": "[Error] Traceback (most recent call last):\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 571, in eval_code_async\n    await CodeRunner(\n          ^^^^^^^^^^^\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 268, in __init__\n    self.ast = next(self._gen)\n               ^^^^^^^^^^^^^^^\n  File \"/lib/python311.zip/_pyodide/_base.py\", line 145, in _parse_and_compile_gen\n    mod = compile(source, filename, mode, flags | ast.PyCF_ONLY_AST)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<exec>\", line 1\n    x = \n        ^\nSyntaxError: invalid syntax"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dabei ist nur der letzte Abschnitt von Bedeutung.\n\n  File \"<exec>\", line 1\n    x = \n        ^\nSyntaxError: invalid syntax\n\nHier sehen Sie, was genau im Code falsch ist. In diesem Fall liegt der Fehler daran, dass der Variable kein Wert zugeordnet wurde. Es steht auch die Zeile, auf welcher der Fehler auftritt. Und es sagt auch, dass es sich um einen SyntaxError handelt.\n\nWenn der Fehler innerhalb einer Funktion auftritt, steht im oberen Abschnitt auch noch, in welcher Funktion und von wo die Funktion aufgerufen wurde. Dort muss man meistens etwas zwischen den Zeilen lesen, es lohnt sich nicht, alles im Detail zu verstehen. Auch kann die Fehlermeldung in verschiedenen Programmierumgebungen etwas anders aussehen.\n\nAuch wichtig zu erwähnen ist, dass ein Fehler keinen Schaden auf Ihrem Gerät hinterlässt, sollte ein Fehler während der Ausführung des Programmes auftreten, bricht das Programm ab und der Computer löscht alles was mit dem Programm zu tun hatte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Weitere Errors\n\nIndentationError\nDieser Fehler tritt auf, wenn Sie die Einrückungen nicht einheitlich machen. Wenn ein Befehl nur auf halber Höhe ist, weiß Python nicht, ob es noch zu einer Funktion zählt oder nicht.\n\nTypeError\nDieser Fehler tritt auf, wenn eine Funktion oder ein Operator mit einem unpassenden Datentyp versucht wird auszuführen, zum Beispiel, wenn Sie eine Zahl und einen Buchstaben addieren wollen.\n\nNameError\nTritt auf, wenn eine Variable oder Funktion noch nicht definiert ist oder falsch geschrieben ist.\n\nValueError\nDie Funktion erhält das richtige Datenformat, allerdings ist der Inhalt ungeeignet, zum Beispiel: int(\"a\").\n\nIndexError\nWenn auf ein Listenelement zugegriffen werden möchte, welches sich außerhalb der Liste befindet.\n\nZeroDivisionError\nDas passiert, wenn man eine Zahl durch Null teilen möchte."
+        }
+      ],
+      "category": "Python"
+    },
+    {
+      "id": "Modules",
+      "title": "Module",
+      "sections": [
+        {
+          "type": "heading",
+          "text": "Module"
+        },
+        {
+          "type": "paragraph",
+          "text": "Module sind Erweiterungen zu der Basissprache in Python. Im Deutschen nennt man sie auch Bibliotheken. Man kann Module auf verschiedene Arten importieren."
+        },
+        {
+          "type": "code",
+          "code": "import math\nprint(math.sin(0))\n# Diese Methode importiert alles von der math-Bibliothek, man muss nun alle Funktionen mit dem entsprechenden Modulnamen aufrufen wie math.sin. \n\nfrom math import *\nprint(sin(0))\n# Diese Funktion importiert alles von der math-Bibliothek. Der Stern bedeutet, dass alles importiert werden sollte. Jetzt muss man die entsprechende Funktion nicht mehr mit dem Modulnamen aufrufen.\n\nfrom math import sin\nprint(sin(0))\n# Diese Methode ist ähnlich zu der oberen, allerdings importiert man hier nur einzelne Funktionen.\n\n# Es ist in den meisten Fällen egal wie man die Module importiert, man muss einfach darauf achten, dass man nicht Variablen oder Funktionen des Moduls mit eigenen Funktionen überschreibt oder wiederverwendet. Im Zweifelsfall ist die erste Methode zu verwenden."
+        },
+        {
+          "type": "heading",
+          "text": "Nützliche Module"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Numpy**\nNumpy ist eine wichtige Bibliothek, welche die Grundlage für numerische Berechnungen bietet. Wenn Sie mit Matrizen rechnen müssen, hat diese Bibliothek eine grosse Auswahl an vordefinierten Funktionen.\n\n**Mathplotlib**\nMatplotlib ist eine nützliche Bibliothek, um Daten in Diagrammen darzustellen.\n\n**random**\nNützlich, um zufällige Zahlen zu generieren.\n\n**Achtung**\nIm Playground auf dieser Webside können sie nicht alle Module welche aufgelistet sind importieren, da diese teilweise von Drittanbietern bereitgestellt werden. Diese könen sie hier nicht verwenden da der Python Code auf der Webseite ausgefürht wird. Wenn sie Python auf dem Computer heruntergeladen haben müssen sie diese zuerst selbständig herunterladen. Dies könen sie mit:"
+        },
+        {
+          "type": "code",
+          "code": "pip install \"Modulname\""
+        }
+      ],
+      "category": "Python"
+    }
+  ]
+}
